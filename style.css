@@ -1,0 +1,459 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Roboto Condensed',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:
+        linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
+        url("assets/abstract.jpg");
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+    color:white;
+}
+
+
+.fill-text{
+    font-family:'Bebas Neue', sans-serif;
+    font-size:120px;
+    letter-spacing:6px;
+
+    color:transparent;
+    -webkit-text-stroke:2px white;
+
+    opacity:.25;
+
+    transition:
+        color .8s ease,
+        opacity .8s ease,
+        transform .8s ease;
+
+    transform:translateY(40px);
+}
+
+.fill-text.active{
+    color:white;
+    opacity:1;
+    transform:translateY(0);
+}
+
+/*================ NAVBAR =================*/
+.navbar{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:80px;
+
+    display:flex;
+    justify-content:flex-end;   /* Push menu to the right */
+    align-items:center;
+
+    padding:0 70px;
+
+    background:rgba(0,0,0,.35);
+    backdrop-filter:blur(10px);
+
+    border-bottom:1px solid rgba(255,255,255,.2);
+
+    z-index:999;
+}
+
+.logo{
+    font-family:'Bebas Neue',sans-serif;
+    font-size:40px;
+    letter-spacing:4px;
+}
+
+.nav-links{
+    display:flex;
+    list-style:none;
+    gap:40px;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:white;
+    font-size:20px;
+    transition:.3s;
+    position:relative;
+}
+
+.nav-links a::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-5px;
+    width:0;
+    height:2px;
+    background:white;
+    transition:.3s;
+}
+
+.nav-links a:hover::after{
+    width:100%;
+}
+
+/*================ HERO =================*/
+
+.cover{
+
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    padding-top:100px;
+}
+
+.hero{
+
+    text-align:center;
+
+    animation:fadeIn 1s ease;
+}
+
+.hero h1{
+
+    font-family:'Bebas Neue',sans-serif;
+
+    font-size:130px;
+
+    letter-spacing:6px;
+
+    color:white;
+
+    text-shadow:0 0 20px rgba(255,255,255,.35);
+
+    margin-bottom:30px;
+
+    white-space:nowrap;
+}
+
+.hero p{
+
+    font-family:'Bebas Neue',sans-serif;
+
+    font-size:42px;
+
+    letter-spacing:5px;
+
+    margin-bottom:40px;
+}
+
+.profile{
+
+    display:flex;
+
+    justify-content:center;
+}
+
+.profile img{
+
+    width:350px;
+
+    height:350px;
+
+    object-fit:cover;
+
+    border-radius:50%;
+
+    border:8px solid white;
+
+    box-shadow:
+        0 0 35px rgba(255,255,255,.45);
+
+    transition:.4s;
+}
+
+.profile img:hover{
+
+    transform:scale(1.05);
+}
+
+/* PHOTO */
+
+.cover-image{
+    position:absolute;
+    left:50%;
+    top:52%;
+    transform:translate(-50%,-50%);
+}
+
+.cover-image img{
+    width:480px;
+    transition:.4s;
+    filter:drop-shadow(0 20px 40px rgba(0,0,0,.6));
+}
+
+.cover-image img:hover{
+    transform:scale(1.05);
+}
+
+/*================ CONTACT =================*/
+
+.contact-title{
+
+    text-align:center;
+
+    margin-bottom:30px;
+}
+
+.contact-text{
+
+    max-width:700px;
+
+    margin:0 auto 60px;
+
+    text-align:center;
+
+    font-size:22px;
+
+    color:#d9d9d9;
+
+    line-height:1.8;
+}
+
+.socials{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:35px;
+
+    flex-wrap:wrap;
+}
+
+.socials a{
+
+    width:75px;
+
+    height:75px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-decoration:none;
+
+    font-size:34px;
+
+    color:white;
+
+    background:rgba(255,255,255,.08);
+
+    border:2px solid rgba(255,255,255,.15);
+
+    backdrop-filter:blur(10px);
+
+    transition:.35s;
+}
+
+/* Individual Colors */
+
+.socials a:nth-child(1){
+    color:#1877F2;
+}
+
+.socials a:nth-child(2){
+    color:#E4405F;
+}
+
+.socials a:nth-child(3){
+    color:#0A66C2;
+}
+
+.socials a:nth-child(4){
+    color:#ffffff;
+}
+
+.socials a:nth-child(5){
+    color:#ffffff;
+}
+
+/* Hover Effect */
+
+.socials a:hover{
+    transform:translateY(-10px) scale(1.15);
+    box-shadow:0 0 25px rgba(255,255,255,.35);
+    background:white;
+}
+
+.socials a:hover i{
+    color:#030303;
+}
+
+/*================ SECTION =================*/
+
+section{
+    min-height:100vh;
+    padding:120px 80px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+section h2{
+    font-family:'Bebas Neue';
+    font-size:80px;
+    letter-spacing:5px;
+    margin-bottom:30px;
+}
+
+section p{
+    max-width:900px;
+    font-size:22px;
+    line-height:1.8;
+}
+
+.cards{
+    display:flex;
+    gap:30px;
+    flex-wrap:wrap;
+    margin-top:40px;
+}
+
+/*================ EXPERIENCE =================*/
+
+.card{
+    border-left:2px solid white;
+    padding-left:30px;
+    margin-bottom:35px;
+}
+
+.card h3{
+    font-size:30px;
+    color:#fff;
+    margin-bottom:10px;
+}
+
+.card p{
+    color:#ccc;
+    font-size:20px;
+    line-height:1.8;
+}
+
+
+/*================ ABOUT =================*/
+
+.about-content{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:80px;
+}
+
+.about-text{
+    width:60%;
+}
+
+.about-photo{
+    width:380px;
+    border:2px solid white;
+    border-radius:20px;
+    box-shadow:0 12px 25px rgba(0,0,0,.3);
+
+    object-fit:cover;
+    opacity:0;
+    transform:translateX(400px);
+
+    transition:
+        transform 1.3s ease,
+        opacity 1.3s ease;
+}
+
+.about-photo.show{
+    opacity:1;
+
+    transform:translateX(-40px);
+}
+
+/*================ PROJECTS =================*/
+
+.projects-content{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:80px;
+}
+
+.project-list{
+    width:55%;
+}
+
+.project{
+    cursor:pointer;
+    transition:.35s;
+}
+
+.project:hover{
+    transform:translateX(15px);
+}
+
+.project.active{
+    border-left:5px solid white;
+}
+
+.project-photo{
+
+    width: 500px;
+    height: 350px;
+
+    object-fit:cover;
+    object-position:center;
+
+    border-radius:25px;
+    border:5px solid white;
+
+    background:#111;
+
+    box-shadow:
+        0 20px 40px rgba(0,0,0,.45);
+
+    opacity:0;
+
+    transform:translateX(60px) scale(.97);
+
+    transition:
+        opacity .7s ease,
+        transform .7s ease,
+        box-shadow .5s ease;
+}
+
+.project-photo.show{
+
+    opacity:1;
+
+    transform:translateX(0) scale(1);
+}
+
+.project-photo.game{
+    object-fit:contain;
+    background:#111;
+}
+.project-photo.robot,
+.project-photo.classroom{
+    object-fit:cover;
+}
+
+.project-photo:hover{
+    transform:translateX(0) scale(1.03);
+    box-shadow:
+        0 30px 60px rgba(0,0,0,.55),
+        0 0 35px rgba(255,255,255,.35);
+}
