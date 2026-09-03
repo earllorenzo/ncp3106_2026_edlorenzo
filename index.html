@@ -1,1 +1,149 @@
-testgit add index.html
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Your Brand — Home</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Caveat:wght@600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Bootstrap Icons (used only for the icon rail + button icons) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" />
+
+  <!-- Your custom styles -->
+  <link href="css/cpestyle.css" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ================= HERO / LANDING SECTION ================= -->
+  <div class="hero-shell">
+
+    <!-- decorative floating embers — pure CSS, remove .ember-field if you don't want them -->
+    <div class="ember-field" aria-hidden="true">
+      <span class="ember" style="--x:6%;  --delay:0s;   --size:3px;"></span>
+      <span class="ember" style="--x:14%; --delay:2.2s; --size:2px;"></span>
+      <span class="ember" style="--x:22%; --delay:.8s;  --size:4px;"></span>
+      <span class="ember" style="--x:35%; --delay:3.1s; --size:2px;"></span>
+      <span class="ember" style="--x:48%; --delay:1.4s; --size:3px;"></span>
+      <span class="ember" style="--x:61%; --delay:2.7s; --size:2px;"></span>
+      <span class="ember" style="--x:74%; --delay:.3s;  --size:3px;"></span>
+      <span class="ember" style="--x:83%; --delay:1.9s; --size:4px;"></span>
+      <span class="ember" style="--x:91%; --delay:3.6s; --size:2px;"></span>
+      <span class="ember" style="--x:97%; --delay:1.1s; --size:3px;"></span>
+    </div>
+
+    <div class="container-xxl hero-viewport">
+      <div class="panel">
+
+        <!-- vertical quick-link rail (desktop only) — mirrors the sidebar in the reference,
+             swap the icons/hrefs for whatever quick links your site needs -->
+        <nav class="icon-rail d-none d-lg-flex flex-column" aria-label="Quick links">
+          <a href="#" class="icon-rail__link" aria-label="Home"><i class="bi bi-house-door"></i></a>
+          <a href="#" class="icon-rail__link" aria-label="Messages"><i class="bi bi-chat-dots"></i></a>
+          <a href="#" class="icon-rail__link" aria-label="Favorites"><i class="bi bi-gem"></i></a>
+          <a href="#" class="icon-rail__link" aria-label="Account"><i class="bi bi-person-circle"></i></a>
+        </nav>
+
+        <!-- top navigation -->
+        <nav class="navbar navbar-expand-lg navbar-dark panel__navbar">
+          <div class="container-fluid px-0">
+
+            <!-- logo — replace the badge icon + wordmark with your own -->
+            <a class="navbar-brand logo-mark" href="Manabat_cpe.html">
+              <span class="logo-mark__badge"><i class="bi bi-stars"></i></span>
+              <span class="logo-mark__word">Your Brand</span>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#mainNav" aria-controls="mainNav"
+                    aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="mainNav">
+              <!-- navigation to the major sections / pages of the site -->
+              <ul class="navbar-nav mx-lg-auto gap-lg-4 nav-links">
+                <li class="nav-item"><a class="nav-link active" href="Manabat_cpe.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="features.html">Features</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+              </ul>
+              <a href="#" class="btn btn-outline-light rounded-pill px-4 sign-in-btn">Sign In</a>
+            </div>
+
+          </div>
+        </nav>
+
+        <!-- main hero row -->
+        <div class="row g-0 hero-row align-items-center">
+
+          <!-- LEFT — paste your GIF here (see css/style.css: .media-frame) -->
+          <div class="col-12 col-lg-6 order-2 order-lg-1 media-col">
+            <div class="media-frame" role="img" aria-label="Featured animation">
+              <!--
+                The GIF is set as a CSS background in css/style.css so a missing
+                file never shows a broken-image icon. Just drop your file at
+                assets/img/hero.gif — or swap this div for:
+                <img src="assets/img/hero.gif" class="media-frame__img" alt="...">
+              -->
+            </div>
+
+            <div class="mini-cards">
+              <div class="mini-card">
+                <div class="mini-card__thumb mini-card__thumb--one"></div>
+                <div class="mini-card__text">
+                  <span class="mini-card__title">Feature One</span>
+                  <span class="mini-card__subtitle">Short description</span>
+                </div>
+              </div>
+              <div class="mini-card">
+                <div class="mini-card__thumb mini-card__thumb--two"></div>
+                <div class="mini-card__text">
+                  <span class="mini-card__title">Feature Two</span>
+                  <span class="mini-card__subtitle">Short description</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- RIGHT — title, banner intro, call-to-action buttons -->
+          <div class="col-12 col-lg-6 order-1 order-lg-2 content-col">
+            <h1 class="hero-title">
+              WELCOME <span class="script-accent">to</span><br />
+              YOUR SITE
+            </h1>
+
+            <p class="hero-intro">
+              A short introduction goes here — one or two lines about what you
+              do, who it's for, and why it's worth a look.
+            </p>
+
+            <div class="cta-group">
+              <a href="#" class="btn cta-primary rounded-pill">
+                <span>Get Started</span>
+                <span class="cta-primary__icon"><i class="bi bi-play-fill"></i></span>
+              </a>
+              <a href="#features" class="btn cta-secondary rounded-pill">Learn More</a>
+            </div>
+          </div>
+
+        </div>
+        <!-- /hero-row -->
+
+      </div>
+      <!-- /panel -->
+    </div>
+  </div>
+  <!-- ================= /HERO / LANDING SECTION ================= -->
+
+  <!-- Next sections of the landing page (About preview, Features, Footer, etc.)
+       will go here once we build them out. -->
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>testgit add index.html
