@@ -1,24 +1,177 @@
+/* Base Layout & Theme */
 body {
+    background-color: #08031A;
+    color: #FFFFFF;
+    font-family: 'Montserrat', sans-serif;
     min-height: 100vh;
+    margin: 0;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* Background glow */
+.glow {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(120px);
+    z-index: -1;
+    pointer-events: none;
+}
+
+.glow-purple {
+    width: 480px;
+    height: 480px;
+    background: rgba(147, 51, 234, 0.4);
+    top: 10%;
+    right: 15%;
+}
+
+.glow-blue {
+    width: 380px;
+    height: 380px;
+    background: rgba(37, 99, 235, 0.3);
+    bottom: 5%;
+    right: 20%;
+}
+
+/* Compact Pill Navbar (Kept on the Left) */
+header {
     display: flex;
-    flex-direction: column;
+    justify-content: flex-start;
 }
 
-main {
-    flex: 1;
+.glass-navbar {
+    display: inline-flex;
+    width: auto;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 50px;
 }
 
-.hero {
-    min-height: 70vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.logo-img {
+    height: 24px;
+    width: auto;
 }
 
-.card {
-    height: 100%;
+.navbar-nav .nav-link {
+    color: rgba(255, 255, 255, 0.55);
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+    padding-left: 0.8rem !important;
+    padding-right: 0.8rem !important;
 }
 
-footer {
-    margin-top: auto;
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    color: #FFFFFF;
+}
+
+/* Hero Section */
+.hero-section {
+    min-height: calc(100vh - 120px);
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+    position: relative;
+}
+
+/* Hero Text Content Wrapper */
+.hero-text-wrapper {
+    padding-left: 2.5rem !important;
+}
+
+
+.vertical-line {
+    position: absolute;
+    left: 3rem; 
+    top: 30px;   
+    bottom: 60px; 
+    width: 2px;
+    background: linear-gradient(
+        180deg, 
+        rgba(255, 255, 255, 0.7) 0%, 
+        rgba(255, 255, 255, 0.1) 85%, 
+        transparent 100%
+    );
+    pointer-events: none;
+}
+
+/* Hero Typography */
+.hero-title {
+    font-size: clamp(3rem, 5.5vw, 5rem);
+    font-weight: 500; 
+    line-height: 1.1;       
+    padding-bottom: 0.2em;
+    overflow: visible;
+
+    background: linear-gradient(
+        135deg, 
+        #FFFFFF 0%, 
+        #E9D5FF 35%, 
+        #C084FC 65%, 
+        #F472B6 100%
+    );
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 2px 10px rgba(192, 132, 252, 0.3));
+}
+
+.hero-subtitle {
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 1.05rem;
+    font-weight: 300;
+    line-height: 1.5;
+}
+
+/* Action Button */
+.btn-pill {
+    display: inline-block;
+    padding: 10px 32px;
+    border-radius: 50px;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    color: #FFFFFF;
+    font-size: 0.95rem;
+    font-weight: 400;
+    text-decoration: none;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+    transition: all 0.3s ease;
+}
+
+.btn-pill:hover {
+    background: rgba(255, 255, 255, 0.18);
+    border-color: rgba(255, 255, 255, 0.5);
+    color: #FFFFFF;
+    transform: translateY(-2px);
+}
+
+/* Levitating Animation for Laptop */
+.hero-laptop-img {
+    max-width: 85%;
+    height: auto;
+    transition: filter 0.3s ease;
+}
+
+.levitate {
+    animation: float 3.2s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+        filter: drop-shadow(0 20px 25px rgba(0, 0, 0, 0.5));
+    }
+    50% {
+        transform: translateY(-25px); /* Increased float height (was -12px) */
+        filter: drop-shadow(0 45px 40px rgba(0, 0, 0, 0.7)); /* Shadow expands/dims when high */
+    }
+    100% {
+        transform: translateY(0px);
+        filter: drop-shadow(0 20px 25px rgba(0, 0, 0, 0.5));
+    }
 }
