@@ -1,12 +1,61 @@
 /* Base Layout & Theme */
+/* General Body Styles */
 body {
-    background-color: #08031A;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    
     color: #FFFFFF;
     font-family: 'Montserrat', sans-serif;
     min-height: 100vh;
     margin: 0;
     overflow-x: hidden;
     position: relative;
+}
+
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+body.home-page {
+    background-image: url('assets/homepagebg2.png'); /* Replace with home page background file */
+}
+
+body.about-page {
+    overflow-x: hidden;
+    overflow-y: auto;
+    background-color: #08031A;
+    margin: 0;
+    padding: 0;
+}
+
+/* Vertical Full-Height Sections */
+.about-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100vw;
+    min-height: 100vh;
+    padding-top: 120px; 
+    padding-bottom: 4rem;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+/* Background Image Assignments */
+.about-section.slide-1 {
+    background-image: url('assets/whatiscpe.png');
+}
+
+.about-section.slide-2 {
+    background-image: url('assets/hardsoft_1.png');
+}
+
+.about-section.slide-3 {
+    background-image: url('assets/hardsoft_2.png');
 }
 
 /* Background glow */
@@ -103,21 +152,22 @@ header {
 .hero-title {
     font-size: clamp(3rem, 5.5vw, 5rem);
     font-weight: 500; 
-    line-height: 1.1;       
+    line-height: 1.1;
+    letter-spacing: -1px;
+    
     padding-bottom: 0.2em;
     overflow: visible;
 
+    /* Custom 3-Color Gradient: White -> #5c6ff4 -> #e870c2 */
     background: linear-gradient(
         135deg, 
         #FFFFFF 0%, 
-        #E9D5FF 35%, 
-        #C084FC 65%, 
-        #F472B6 100%
+        #5C6FF4 50%, 
+        #E870C2 100%
     );
-
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    filter: drop-shadow(0 2px 10px rgba(192, 132, 252, 0.3));
+    filter: drop-shadow(0 2px 12px rgba(92, 111, 244, 0.35));
 }
 
 .hero-subtitle {
@@ -154,6 +204,7 @@ header {
 .hero-laptop-img {
     max-width: 85%;
     height: auto;
+margin-left: -170px; 
     transition: filter 0.3s ease;
 }
 
@@ -174,4 +225,207 @@ header {
         transform: translateY(0px);
         filter: drop-shadow(0 20px 25px rgba(0, 0, 0, 0.5));
     }
+}
+
+
+/* About Page Section */
+.about-section {
+    min-height: calc(100vh - 120px);
+    padding-top: 3rem;
+    padding-bottom: 4rem;
+}
+
+/* About Title Header */
+.about-title {
+    font-size: clamp(2.8rem, 5vw, 4.2rem);
+    font-weight: 300;
+    line-height: 1.05;
+    letter-spacing: -1px;
+}
+
+/* Gradient Text (White -> #5C6FF4 -> #E870C2) */
+.gradient-text {
+    background: linear-gradient(
+        135deg, 
+        #FFFFFF 0%, 
+        #5C6FF4 55%, 
+        #E870C2 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+    padding-bottom: 0.1em;
+}
+
+/* Horizontal Dividing Line */
+.about-divider {
+    width: 100%;
+    max-width: 480px;
+    height: 1px;
+    background: linear-gradient(
+        90deg, 
+        rgba(255, 255, 255, 0.4) 0%, 
+        rgba(255, 255, 255, 0.05) 100%
+    );
+}
+
+/* About Text Body */
+.about-text-content p {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 0.98rem;
+    font-weight: 300;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+    max-width: 480px;
+}
+
+.max-content-width {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.about-subtitle {
+    max-width: 950px;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    font-weight: 300;
+}
+
+/* Container Z-index control */
+/* Container Z-Index */
+.z-1 {
+    z-index: 1;
+}
+
+/* Wrapper to hold cards & middle T-Line */
+.cards-line-container {
+    position: relative;
+    width: 100%;
+    max-width: 1050px;
+    margin: 0 auto;
+}
+
+/* Full Section T-Line Wrapper */
+.t-line-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* Horizontal Line */
+.t-line-horizontal {
+    position: absolute;
+    top: 52%;
+    left: 20%;
+    width: 60%;
+    height: 10px;
+    background: #8b72bd;
+    box-shadow: 0 0 12px rgba(139, 114, 189, 0.8);
+    border-radius: 2px;
+}
+
+/* Vertical Line - Touches bottom edge without fading early */
+.t-line-vertical {
+    position: absolute;
+    top: 52%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10px;
+    bottom: 0; /* Extends straight down to section border */
+    background: #8b72bd; /* Solid color so it doesn't fade before the border */
+    box-shadow: 0 0 12px rgba(139, 114, 189, 0.8);
+}
+
+/* Glassmorphic Cards (iPhone HUD Aesthetic) */
+.hw-sw-card {
+    /* Semi-transparent off-black base for glass translucency */
+    background: rgba(18, 12, 34, 0.45) !important;
+    
+    /* Hardware-accelerated frosted glass blur */
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    
+    /* Subtle off-white glass edge highlight */
+    border: 1px solid rgba(255, 255, 255, 0.18) !important;
+    border-radius: 32px;
+    
+    /* Soft ambient shadow with a faint neon purple depth */
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5),
+                inset 0 1px 1px rgba(255, 255, 255, 0.2);
+                
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 460px;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect: Glows gently and raises like an interactive HUD card */
+.hw-sw-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(232, 112, 194, 0.4) !important;
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.6),
+                0 0 20px rgba(92, 111, 244, 0.25);
+}
+
+/* List Formatting */
+.custom-icon-list li {
+    font-size: 0.95rem;
+    margin-bottom: 0.4rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+
+
+/* Custom Scrollbar Styles */
+
+/* Slightly wider track (increased from 10px to 14px) */
+::-webkit-scrollbar {
+    width: 14px;
+}
+
+/* Dark background track */
+::-webkit-scrollbar-track {
+    background: rgba(8, 3, 26, 0.95);
+}
+
+/* Off-White Glass Thumb */
+::-webkit-scrollbar-thumb {
+    background: rgba(245, 245, 247, 0.35); /* Soft off-white translucency */
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 20px;
+    /* Inner padding border to give space around the thumb */
+    border: 3px solid rgba(8, 3, 26, 0.95);
+}
+
+/* Hover State - Brightens the Off-White */
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.65); /* Crisper off-white on hover */
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.25);
+}
+
+/* Firefox support */
+* {
+    scrollbar-width: auto;
+    scrollbar-color: rgba(245, 245, 247, 0.4) rgba(8, 3, 26, 0.95);
+}
+
+
+/* Custom Text Contrast Overrides */
+.text-white-50 {
+    color: rgba(255, 255, 255, 0.85) !important;
+}
+
+.about-subtitle,
+.hw-sw-card p,
+.custom-icon-list li {
+    color: rgba(255, 255, 255, 0.85);
 }
