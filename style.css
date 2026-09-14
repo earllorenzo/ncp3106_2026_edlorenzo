@@ -51,11 +51,19 @@ body.about-page {
 }
 
 .about-section.slide-2 {
-    background-image: url('assets/hardsoft_1.png');
+    background-image: url('assets/ABT FIRST.png');
 }
 
 .about-section.slide-3 {
-    background-image: url('assets/hardsoft_2.png');
+    background-image: url('assets/ABT LAST.png');
+}
+
+.about-section.slide-4 {
+    background-image: url('assets/ABT LAST.png');
+}
+
+.about-section.slide-5 {
+    background-image: url('assets/ABT LAST.png');
 }
 
 /* Background glow */
@@ -227,8 +235,8 @@ margin-left: -170px;
     }
 }
 
+/* ABOUT PAGE */
 
-/* About Page Section */
 .about-section {
     min-height: calc(100vh - 120px);
     padding-top: 3rem;
@@ -382,6 +390,356 @@ margin-left: -170px;
     gap: 0.5rem;
 }
 
+
+/* Connecting Line from Section 2 to Section 3 Header */
+.section-connect-line {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10px;
+    height: 120px;
+    background: #8b72bd;
+    box-shadow: 0 0 12px rgba(139, 114, 189, 0.8);
+    z-index: 0;
+}
+
+/* Outer Wide Glass HUD Box */
+.real-world-container {
+    background: rgba(18, 12, 34, 0.55);
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    border: 1.5px solid rgba(255, 255, 255, 0.18);
+    border-radius: 36px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6),
+                inset 0 1px 1px rgba(255, 255, 255, 0.2);
+}
+
+/* Individual Image Card Wrappers */
+.example-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.example-card .img-wrapper {
+    width: 100%;
+    height: 260px;
+    border-radius: 24px;
+    overflow: hidden;
+    background: #000;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.example-card .img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.example-card:hover .img-wrapper {
+    transform: translateY(-5px);
+    border-color: rgba(232, 112, 194, 0.5);
+}
+
+/* Card Titles Below Images */
+.example-label {
+    color: #FFFFFF;
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin-top: 1.25rem;
+    margin-bottom: 0;
+    letter-spacing: -0.5px;
+}
+
+
+/* Section 4 Background */
+.about-section.slide-4 {
+    background-color: #08031A;
+}
+
+/* Enlarged Glass Cards with Vibrant RGB Glow (Section 4) */
+.cpe-action-card {
+    position: relative;
+    /* Rich purple-tinted glass background */
+    background: linear-gradient(
+        135deg, 
+        rgba(38, 18, 68, 0.75) 0%, 
+        rgba(16, 8, 32, 0.85) 100%
+    );
+    backdrop-filter: blur(25px) saturate(200%);
+    -webkit-backdrop-filter: blur(25px) saturate(200%);
+    
+    border-radius: 24px;
+    
+    /* Increased Sizing & Padding */
+    min-height: 280px;
+    padding: 2.25rem 1.5rem !important;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+
+    /* Base border with white-pink shine gradient */
+    border: 2px solid transparent;
+    background-clip: padding-box;
+
+    /* Multi-layered RGB Glow Shadows */
+    box-shadow: 
+        /* Top inner rim light reflection */
+        inset 0 1px 2px rgba(255, 255, 255, 0.9),
+        /* Bottom inner rim pink reflection */
+        inset 0 -1px 2px rgba(232, 112, 194, 0.6),
+        /* Deep card drop shadow */
+        0 20px 40px rgba(0, 0, 0, 0.7),
+        /* Bright ambient RGB purple aura */
+        0 0 35px rgba(139, 114, 189, 0.45);
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Vivid RGB Light Rim (Sharp Glowing Border) */
+.cpe-action-card::before {
+    content: '';
+    position: absolute;
+    inset: -2px;
+    border-radius: 24px;
+    padding: 2px;
+    background: linear-gradient(
+        135deg,
+        #FFFFFF 0%,
+        #5C6FF4 30%,
+        #8B72BD 60%,
+        #E870C2 100%
+    );
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+}
+
+/* Hover State: Expanded Scale & Pulsing RGB Glow */
+.cpe-action-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 
+        inset 0 1px 3px rgba(255, 255, 255, 1),
+        inset 0 -1px 3px rgba(232, 112, 194, 0.9),
+        0 25px 50px rgba(0, 0, 0, 0.8),
+        0 0 45px rgba(232, 112, 194, 0.65),
+        0 0 25px rgba(92, 111, 244, 0.5);
+}
+
+/* Larger Icon Images */
+.card-icon-img {
+    width: 64px;
+    height: 64px;
+    object-fit: contain;
+    filter: drop-shadow(0 4px 12px rgba(232, 112, 194, 0.4));
+}
+.cpe-action-card .card-icon {
+    font-size: 2.2rem;
+}
+
+.cpe-action-card .card-title {
+    color: #FFFFFF;
+    font-size: 1.35rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    letter-spacing: -0.5px;
+}
+
+.cpe-action-card .card-desc {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.88rem;
+    font-weight: 300;
+    line-height: 1.4;
+    margin-bottom: 0;
+}
+
+/* Glass Switch Pill Switcher (Matches Mockup) */
+.custom-switch-pill {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 50px;
+    display: inline-flex;
+    gap: 4px;
+}
+
+.custom-switch-pill .nav-link {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    padding: 8px 32px;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    background: transparent;
+}
+
+.custom-switch-pill .nav-link.active {
+    background: linear-gradient(135deg, rgba(92, 111, 244, 0.6) 0%, rgba(232, 112, 194, 0.6) 100%);
+    color: #FFFFFF;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.card-icon-img {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+    filter: drop-shadow(0 2px 8px rgba(255, 255, 255, 0.2));
+}
+
+/* Section 5 Background */
+.about-section.slide-5 {
+    background-color: #05020F;
+}
+
+/* Outer Wrapper (Hides Overflow & Applies Side Fades) */
+.tech-marquee-wrapper {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    padding: 1.5rem 0;
+    /* Soft edge fade mask on left & right sides */
+    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+
+/* Continuous Moving Track */
+.tech-marquee-track {
+    display: flex;
+    gap: 1.5rem;
+    width: max-content;
+    /* Animates left to right endlessly */
+    animation: marqueeScrollRight 35s linear infinite;
+}
+
+/* Pause animation on hover */
+.tech-marquee-wrapper:hover .tech-marquee-track {
+    animation-play-state: paused;
+}
+
+/* Rounded Tech Cards (Matching Mockup aspect ratio & radius) */
+.tech-card {
+    width: 420px;
+    height: 250px;
+    flex-shrink: 0;
+    border-radius: 20px;
+    overflow: hidden;
+    background: #000;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5),
+                inset 0 1px 1px rgba(255, 255, 255, 0.2);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.tech-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.tech-card:hover {
+    transform: scale(1.03);
+    border-color: rgba(232, 112, 194, 0.6);
+}
+
+/* Rightward Scrolling Keyframes */
+@keyframes marqueeScrollRight {
+    0% {
+        transform: translateX(-50%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+/* Section 5 Background */
+.about-section.slide-5 {
+    background-color: #05020F;
+}
+
+/* Outer Wrapper (Tight margin, zero horizontal padding) */
+.tech-marquee-wrapper {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    padding: 0;
+}
+
+/* Moving Track Container */
+.tech-marquee-track {
+    display: flex;
+    gap: 12px; /* Tight gaps matching image reference */
+    width: max-content;
+}
+
+/* Smooth Infinite Scroll to the Right */
+.scroll-right {
+    animation: marqueeScrollRight 28s linear infinite;
+}
+
+.scroll-right-delayed {
+    animation: marqueeScrollRight 34s linear infinite;
+}
+
+/* Pause scroll when hovering over any card */
+.tech-marquee-wrapper:hover .tech-marquee-track {
+    animation-play-state: paused;
+}
+
+/* Card Heights & Glass Borders */
+.tech-card {
+    height: 240px;
+    flex-shrink: 0;
+    border-radius: 16px;
+    overflow: hidden;
+    background: #000;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.tech-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.tech-card:hover {
+    transform: scale(1.02);
+    border-color: rgba(232, 112, 194, 0.6);
+}
+
+/* Width Variations to Match Image Ratio */
+.card-narrow {
+    width: 220px;
+}
+
+.card-wide {
+    width: 380px;
+}
+
+.card-extra-wide {
+    width: 480px;
+}
+
+/* Continuous Rightward Motion Keyframes */
+@keyframes marqueeScrollRight {
+    0% {
+        transform: translateX(-50%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
 
 
 /* Custom Scrollbar Styles */
