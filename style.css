@@ -1,5 +1,6 @@
-/* Base Layout & Theme */
-/* General Body Styles */
+/* ==========================================================================
+   HOME TABS SECTION
+   ========================================================================== */
 body {
     background-size: cover;
     background-position: center;
@@ -235,7 +236,9 @@ margin-left: -170px;
     }
 }
 
-/* ABOUT PAGE */
+/* ==========================================================================
+   ABOUT TABS SECTION
+   ========================================================================== */
 
 .about-section {
     min-height: calc(100vh - 120px);
@@ -741,8 +744,9 @@ margin-left: -170px;
     }
 }
 
-
-/* Custom Scrollbar Styles */
+/* ==========================================================================
+   SCROLL BAR STYLE
+   ========================================================================== */
 
 /* Slightly wider track (increased from 10px to 14px) */
 ::-webkit-scrollbar {
@@ -786,4 +790,167 @@ margin-left: -170px;
 .hw-sw-card p,
 .custom-icon-list li {
     color: rgba(255, 255, 255, 0.85);
+}
+
+/* ==========================================================================
+   FEILDS TABS SECTION
+   ========================================================================== */
+.fields-body {
+    background-color: #05020F;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.fields-hero {
+    height: 100vh;
+    padding-top: 100px;
+    position: relative;
+}
+
+.fields-desc {
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 0.95rem;
+    font-weight: 300;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+/* ==========================================================================
+   UPDATED 3D FAN DECK (WIDE SPACING FOR CARD 4 VISIBILITY)
+   ========================================================================== */
+
+/* 3D Fan Deck Container Layout */
+.fan-deck-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: 100%;
+    max-width: 1600px; /* Expanded container width */
+    height: 480px;
+    perspective: 1200px;
+    margin-bottom: -50px;
+}
+
+
+/* Individual Base Cards */
+.fan-card {
+    width: 330px;
+    height: 440px;
+    border-radius: 32px;
+    position: absolute;
+    bottom: 0;
+    transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+    cursor: pointer;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.7);
+}
+
+/* Updated Card Inner for Dead-Center Alignment */
+.fan-card .card-inner {
+    width: 100%;
+    height: 100%;
+    border-radius: 32px;
+    border: 1.5px solid rgba(255, 255, 255, 0.25);
+    background: linear-gradient(180deg, rgba(255,255,255,0.12) 0%, rgba(0,0,0,0.3) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Center Image Container */
+.card-img-center-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding-top: 15px; /* Slight optical adjustment for perfectly balanced visual centering */
+}
+
+/* Expanded & Centered Card Image Styling */
+.field-card-img {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+    filter: drop-shadow(0 14px 28px rgba(0,0,0,0.6));
+    transition: transform 0.3s ease;
+}
+
+/* Scale effect on hover for the image */
+.fan-card:hover .field-card-img {
+    transform: scale(1.1);
+}
+
+.card-title-text {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #FFFFFF;
+    letter-spacing: -0.5px;
+}
+
+.badge-rating {
+    background: rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #FFFFFF;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.card-role-sub {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.85);
+    font-weight: 500;
+    margin: 0;
+}
+
+/* Wide Spread & Angle Offsets */
+.card-cybersecurity {
+    left: calc(50% - 680px);
+    transform: rotate(-22deg) translateY(90px);
+    background: linear-gradient(160deg, #7c3aed 0%, #3b0764 100%);
+    z-index: 1;
+}
+
+.card-robotics {
+    left: calc(50% - 370px);
+    transform: rotate(-11deg) translateY(35px);
+    background: linear-gradient(160deg, #ff416c 0%, #8a0b29 100%);
+    z-index: 2;
+}
+
+.card-embedded {
+    left: calc(50% - 165px); /* Perfectly centered (1/2 of 330px width) */
+    transform: rotate(0deg) translateY(-20px);
+    background: linear-gradient(160deg, #00c6ff 0%, #004099 100%);
+    z-index: 5;
+}
+
+/* Card 4 (AI & ML) moved out to calc(50% + 40px) to expose header text */
+.card-ai {
+    left: calc(50% + 40px);
+    transform: rotate(11deg) translateY(35px);
+    background: linear-gradient(160deg, #11998e 0%, #064e3b 100%);
+    z-index: 2;
+}
+
+/* Card 5 (Networks) shifted outward to maintain fan symmetry */
+.card-iot {
+    left: calc(50% + 350px);
+    transform: rotate(22deg) translateY(90px);
+    background: linear-gradient(160deg, #3a7bd5 0%, #1a365d 100%);
+    z-index: 1;
+}
+
+/* Hover Elevation Effect */
+.fan-card:hover {
+    transform: translateY(-60px) scale(1.06) rotate(0deg) !important;
+    z-index: 10 !important;
+    box-shadow: 0 35px 70px rgba(0, 0, 0, 0.85), 
+                0 0 35px rgba(255, 255, 255, 0.35);
 }

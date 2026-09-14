@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CpE - Specialization Fields</title>
+    <!-- Google Fonts Matching Home/About -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="fields-body">
+
+    <!-- Fixed Header Navbar -->
+    <header class="fixed-top container-fluid px-4 px-md-5 pt-4">
+        <nav class="navbar navbar-expand-lg glass-navbar px-3 px-md-4 py-2">
+            <div class="container-fluid p-0 d-flex justify-content-between align-items-center">
+                <a class="navbar-brand d-flex align-items-center gap-2 text-white fw-bold me-4" href="index.html">
+                    <img src="assets/cpelogo.png" alt="CpE Logo" class="logo-img">
+                    <span>CpE</span>
+                </a>
+                <button class="navbar-toggler navbar-dark border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav gap-lg-4">
+                        <li class="nav-item"><a class="nav-link" href="index.html">HOME</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">ABOUT</a></li>
+                        <li class="nav-item"><a class="nav-link" href="cpe-at-ue.html">CPE AT UE</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="fields.html">FIELDS</a></li>
+                        <li class="nav-item"><a class="nav-link" href="careers.html">CAREERS</a></li>
+                        <li class="nav-item"><a class="nav-link" href="faqs.html">FAQs</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Hero Container -->
+    <main class="fields-hero d-flex flex-column justify-content-between align-items-center text-center">
+        
+        <!-- Subtle Glow Backgrounds -->
+        <div class="glow glow-purple"></div>
+        <div class="glow glow-blue"></div>
+
+        <!-- Header Content -->
+        <div class="fields-header position-relative z-1 mt-auto">
+            <h1 class="hero-title mb-1">Career Fields</h1>
+            <h2 class="about-title gradient-text fw-bold">Computer Engineering</h2>
+            <p class="fields-desc mt-2">Explore the core domains and industry roles shaping modern technologies.</p>
+        </div>
+
+        <!-- 3D Fan Deck Cards Section -->
+        <div class="fan-deck-container position-relative z-1">
+            
+            <!-- Card 1: Cybersecurity -->
+            <div class="fan-card card-cybersecurity">
+                <div class="card-inner p-4 position-relative">
+                    <div class="d-flex justify-content-between align-items-center w-100 position-absolute top-0 start-0 p-4 z-2">
+                        <span class="card-title-text">Cybersecurity</span>
+                        <span class="badge-rating">★ 4.9</span>
+                    </div>
+                    
+                    <!-- Center Image Wrapper -->
+                    <div class="card-img-center-wrapper">
+                        <img src="assets/cyber-icon.png" alt="Cybersecurity Specialist" class="field-card-img">
+                    </div>
+
+                    <div class="w-100 position-absolute bottom-0 start-0 pb-4 text-center z-2">
+                        <p class="card-role-sub">Security Engineer</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2: Robotics & Automation -->
+            <div class="fan-card card-robotics">
+                <div class="card-inner p-4 position-relative">
+                    <div class="d-flex justify-content-between align-items-center w-100 position-absolute top-0 start-0 p-4 z-2">
+                        <span class="card-title-text">Robotics</span>
+                        <span class="badge-rating">★ 4.8</span>
+                    </div>
+                    
+                    <!-- Center Image Wrapper -->
+                    <div class="card-img-center-wrapper">
+                        <img src="assets/robotics-icon.png" alt="Robotics Engineer" class="field-card-img">
+                    </div>
+
+                    <div class="w-100 position-absolute bottom-0 start-0 pb-4 text-center z-2">
+                        <p class="card-role-sub">Automation Specialist</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3: Embedded Systems -->
+            <div class="fan-card card-embedded active-center">
+                <div class="card-inner p-4 position-relative">
+                    <div class="d-flex justify-content-between align-items-center w-100 position-absolute top-0 start-0 p-4 z-2">
+                        <span class="card-title-text">Embedded</span>
+                        <span class="badge-rating">★ 5.0</span>
+                    </div>
+                    
+                    <!-- Center Image Wrapper -->
+                    <div class="card-img-center-wrapper">
+                        <img src="assets/embedded-icon.png" alt="Embedded Systems Engineer" class="field-card-img">
+                    </div>
+
+                    <div class="w-100 position-absolute bottom-0 start-0 pb-4 text-center z-2">
+                        <p class="card-role-sub">Firmware Engineer</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 4: AI & Machine Learning -->
+            <div class="fan-card card-ai">
+                <div class="card-inner p-4 position-relative">
+                    <div class="d-flex justify-content-between align-items-center w-100 position-absolute top-0 start-0 p-4 z-2">
+                        <span class="card-title-text">AI & ML</span>
+                        <span class="badge-rating">★ 4.9</span>
+                    </div>
+                    
+                    <!-- Center Image Wrapper -->
+                    <div class="card-img-center-wrapper">
+                        <img src="assets/ai-icon.png" alt="AI Specialist" class="field-card-img">
+                    </div>
+
+                    <div class="w-100 position-absolute bottom-0 start-0 pb-4 text-center z-2">
+                        <p class="card-role-sub">Machine Learning Engineer</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 5: IoT & Networking -->
+            <div class="fan-card card-iot">
+                <div class="card-inner p-4 position-relative">
+                    <div class="d-flex justify-content-between align-items-center w-100 position-absolute top-0 start-0 p-4 z-2">
+                        <span class="card-title-text">Networks</span>
+                        <span class="badge-rating">★ 4.7</span>
+                    </div>
+                    
+                    <!-- Center Image Wrapper -->
+                    <div class="card-img-center-wrapper">
+                        <img src="assets/cpelogo.png" alt="Network Systems Engineer" class="field-card-img">
+                    </div>
+
+                    <div class="w-100 position-absolute bottom-0 start-0 pb-4 text-center z-2">
+                        <p class="card-role-sub">IoT Architect</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
