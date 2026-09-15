@@ -328,11 +328,13 @@ margin-left: -170px;
 }
 
 /* Horizontal Line */
+/* Horizontal Line - Perfectly Centered at 50% */
 .t-line-horizontal {
     position: absolute;
     top: 52%;
-    left: 20%;
-    width: 60%;
+    left: 50%;
+    transform: translateX(-50%); /* Centers the bar horizontally */
+    width: 30%;                   /* Extends equally 30% to the left and 30% to the right */
     height: 10px;
     background: #8b72bd;
     box-shadow: 0 0 12px rgba(139, 114, 189, 0.8);
@@ -401,10 +403,19 @@ margin-left: -170px;
     left: 50%;
     transform: translateX(-50%);
     width: 10px;
-    height: 120px;
+    height: 320px;
     background: #8b72bd;
     box-shadow: 0 0 12px rgba(139, 114, 189, 0.8);
     z-index: 0;
+}
+
+/* Shrinks text and shifts it left away from the vertical line */
+.about-section.slide-3 h2,
+.about-section.slide-3 h1,
+.about-section.slide-3 .hero-title {
+    font-size: 2.8rem; 
+    margin-right: 40px;
+    text-align: left;
 }
 
 /* Outer Wide Glass HUD Box */
@@ -744,6 +755,132 @@ margin-left: -170px;
     }
 }
 
+/* Main Page Section (No background applied) */
+.cpe-navigation-section {
+    position: relative;
+    width: 100%;
+    padding: 100px 8%;
+    display: flex;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+
+    /* Custom Background Setup */
+    background-image: url('assets/ABT\ LAST.png'); /* Adjust path if in an images folder */
+    background-size: cover;       /* Ensures image covers the full section width/height */
+    background-position: center;  /* Keeps the focal point centered */
+    background-repeat: no-repeat; /* Prevents image from tiling */
+}
+
+.cpe-section-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 80px;
+}
+
+/* Left Heading */
+.cpe-heading-box {
+    flex: 1.2;
+}
+
+.cpe-main-heading {
+    font-size: clamp(2.8rem, 5.5vw, 4.2rem);
+    font-weight: 400;
+    line-height: 1.15;
+    margin: 0;
+    color: #FFFFFF;
+}
+
+.gradient-text {
+    background: linear-gradient(90deg, #6B7BFF 0%, #E870C2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Content Columns */
+.cpe-content-columns {
+    display: flex;
+    gap: 120px;
+    flex: 1;
+    justify-content: flex-start;
+}
+
+.column-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 24px;
+    color: #FFFFFF;
+}
+
+/* Clickable Navigation Buttons */
+.cpe-nav-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.nav-btn {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: rgba(255, 255, 255, 0.75);
+    text-decoration: none;
+    font-size: 1.15rem;
+    font-weight: 400;
+    width: fit-content;
+    padding: 4px 8px;
+    margin-left: -8px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: color 0.25s ease, transform 0.2s ease, background-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* Interactive Hover & Click States */
+.nav-btn:hover {
+    color: #FFFFFF;
+    background-color: rgba(232, 112, 194, 0.15);
+    transform: translateX(6px);
+    box-shadow: 0 0 12px rgba(232, 112, 194, 0.2);
+}
+
+.nav-btn:active {
+    transform: translateX(3px) scale(0.97);
+}
+
+/* Creators List */
+.creators-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.creators-list li {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1.05rem;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+/* Mobile Responsive */
+@media (max-width: 900px) {
+    .cpe-section-container {
+        flex-direction: column;
+        gap: 50px;
+    }
+    
+    .cpe-content-columns {
+        gap: 60px;
+    }
+}
+
+
 /* ==========================================================================
    SCROLL BAR STYLE
    ========================================================================== */
@@ -953,4 +1090,239 @@ margin-left: -170px;
     z-index: 10 !important;
     box-shadow: 0 35px 70px rgba(0, 0, 0, 0.85), 
                 0 0 35px rgba(255, 255, 255, 0.35);
+}
+
+/* ==========================================================================
+   CAREERS HERO & DRAGGABLE CAROUSEL SECTION
+   ========================================================================== */
+
+/* Page Setup */
+.careers-body {
+    background-color: #05020F;
+    min-height: 100vh;
+    overflow-x: hidden;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.careers-hero {
+    min-height: 100vh;
+    padding-top: 100px;
+    padding-bottom: 40px;
+    position: relative;
+}
+
+.hero-title {
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    letter-spacing: -0.5px;
+}
+
+/* Outer Wrapper */
+.carousel-outer-wrapper {
+    width: 100%;
+    padding: 60px 0;
+    position: relative;
+
+    overflow-x: clip; /* or overflow: visible; */
+}
+
+/* Navigation Arrows with Fading Disabled States */
+.carousel-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    background: rgba(18, 12, 34, 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: #FFFFFF;
+    font-size: 1.3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 600;
+    cursor: pointer;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    
+    /* Fade Transitions */
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transition: opacity 0.4s ease, 
+                visibility 0.4s ease, 
+                transform 0.3s cubic-bezier(0.25, 1, 0.5, 1), 
+                background-color 0.3s ease, 
+                border-color 0.3s ease;
+}
+
+.carousel-arrow:hover:not(.disabled) {
+    background: #E870C2;
+    border-color: #FFFFFF;
+    box-shadow: 0 0 20px rgba(232, 112, 194, 0.6);
+    transform: translateY(-50%) scale(1.1);
+}
+
+/* Faded Disabled State */
+.carousel-arrow.disabled {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.arrow-left { left: 20px; }
+.arrow-right { right: 20px; }
+
+/* Draggable Track */
+.careers-carousel-track {
+    display: flex;
+    gap: 24px;
+    padding: 40px 60px;
+    cursor: grab;
+    user-select: none;
+    -webkit-user-select: none;
+    will-change: transform;
+    transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+    align-items: flex-start;
+}
+
+.careers-carousel-track.grabbing {
+    cursor: grabbing;
+}
+
+/* Base Card State (Fatter 360px Width) */
+.career-card {
+    position: relative;
+    width: 360px; /* Fatter card width */
+    height: 480px;
+    flex-shrink: 0;
+    border-radius: 24px;
+    overflow: hidden;
+    background: #0d0622;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    
+    /* Elastic spring transition for explosive pop out */
+    transition: height 0.5s cubic-bezier(0.34, 1.56, 0.64, 1), 
+                transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1), 
+                border-color 0.4s ease, 
+                box-shadow 0.4s ease,
+                opacity 0.4s ease,
+                filter 0.4s ease;
+}
+
+/* Hover Effect for Unexpanded Cards */
+.career-card:not(.expanded):hover {
+    transform: translateY(-10px);
+    border-color: rgba(255, 255, 255, 0.4);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8), 0 0 15px rgba(255, 255, 255, 0.1);
+}
+
+/* Card Image Box */
+.card-image-box {
+    position: relative;
+    width: 100%;
+    height: 480px;
+    flex-shrink: 0;
+    pointer-events: none;
+    transition: height 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.career-card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.85);
+    transition: filter 0.4s ease;
+}
+
+.career-card-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 30%, rgba(13, 6, 34, 0.95) 100%);
+    display: flex;
+    align-items: flex-end;
+    padding: 24px;
+}
+
+.career-card-title {
+    color: #FFFFFF;
+    font-size: 1.45rem;
+    font-weight: 700;
+    line-height: 1.25;
+    margin: 0;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Downward Expansion Details Area */
+.card-expand-details {
+    padding: 0 24px 28px 24px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-15px);
+    transition: opacity 0.3s ease 0.1s, transform 0.3s ease 0.1s, visibility 0.3s ease;
+    background: #0d0622;
+}
+
+.card-desc {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.9rem;
+    line-height: 1.55;
+    margin-top: 10px;
+    margin-bottom: 16px;
+}
+
+.card-skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.badge-skill {
+    background: rgba(232, 112, 194, 0.12);
+    border: 1px solid rgba(232, 112, 194, 0.4);
+    color: #E870C2;
+    font-size: 0.78rem;
+    font-weight: 600;
+    padding: 6px 14px;
+    border-radius: 12px;
+    letter-spacing: 0.3px;
+}
+
+/* --- DRAMATIC SPRING POP-OUT & EXPANDED STATE --- */
+.career-card.expanded {
+    height: 640px; 
+    /* Lifts 30px off the track and scales up to 1.1x */
+    transform: translateY(-30px) scale(1.1) !important; 
+    border-color: #E870C2;
+    
+    /* Neon Aura Glow & Shadow */
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.95), 
+                0 0 45px rgba(232, 112, 194, 0.6),
+                inset 0 0 15px rgba(232, 112, 194, 0.3);
+    z-index: 500;
+}
+
+.career-card.expanded .card-image-box {
+    height: 350px; /* Shrinks image slightly to make room for details */
+}
+
+.career-card.expanded .career-card-img {
+    filter: brightness(1.1);
+}
+
+.career-card.expanded .card-expand-details {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* Background Dimming: Focus effect for non-selected cards */
+.careers-carousel-track.has-expanded .career-card:not(.expanded) {
+    opacity: 0.4;
+    filter: blur(2px) grayscale(40%);
+    transform: scale(0.95);
 }

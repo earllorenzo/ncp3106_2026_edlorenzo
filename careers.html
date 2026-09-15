@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CpE - Career and Job Opportunities</title>
+    
+    <!-- Fonts & Bootstrap -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="careers-body">
+
+    <!-- Header Navbar -->
+    <header class="fixed-top container-fluid px-4 px-md-5 pt-4">
+        <nav class="navbar navbar-expand-lg glass-navbar px-3 px-md-4 py-2">
+            <div class="container-fluid p-0 d-flex justify-content-between align-items-center">
+                <a class="navbar-brand d-flex align-items-center gap-2 text-white fw-bold me-4" href="index.html">
+                    <img src="assets/cpelogo.png" alt="CpE Logo" class="logo-img">
+                    <span>CpE</span>
+                </a>
+                <button class="navbar-toggler navbar-dark border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav gap-lg-4">
+                        <li class="nav-item"><a class="nav-link" href="index.html">HOME</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">ABOUT</a></li>
+                        <li class="nav-item"><a class="nav-link" href="cpe-at-ue.html">CPE AT UE</a></li>
+                        <li class="nav-item"><a class="nav-link" href="fields.html">FIELDS</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="careers.html">CAREERS</a></li>
+                        <li class="nav-item"><a class="nav-link" href="faqs.html">FAQs</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Container -->
+    <main class="careers-hero d-flex flex-column justify-content-between">
+        
+        <div class="container-fluid px-4 px-md-5 mt-auto mb-3">
+            <h1 class="hero-title fw-bold text-white">Career and Job Opportunities</h1>
+        </div>
+
+        <div class="carousel-outer-wrapper">
+            
+            <button class="carousel-arrow arrow-left" id="prevBtn" type="button">
+                <i class="fa-solid fa-chevron-left"></i>
+            </button>
+
+            <!-- Draggable Track -->
+            <div class="careers-carousel-track" id="carouselTrack">
+                
+                <!-- Card 1 -->
+                <div class="career-card">
+                    <div class="card-image-box">
+                        <img src="assets/robotics.png" alt="Robotics Engineer" class="career-card-img">
+                        <div class="career-card-overlay">
+                            <h3 class="career-card-title">Robotics<br>Engineer</h3>
+                        </div>
+                    </div>
+                    <div class="card-expand-details">
+                        <p class="card-desc">Designs, builds, and manages autonomous systems and robotic arms for modern industrial automation.</p>
+                        <div class="card-skills">
+                            <span class="badge badge-skill">ROS</span>
+                            <span class="badge badge-skill">C++</span>
+                            <span class="badge badge-skill">Automation</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="career-card">
+                    <div class="card-image-box">
+                        <img src="assets/cyber-icon.png" alt="Data Engineer" class="career-card-img">
+                        <div class="career-card-overlay">
+                            <h3 class="career-card-title">Data<br>Engineer</h3>
+                        </div>
+                    </div>
+                    <div class="card-expand-details">
+                        <p class="card-desc">Builds and optimizes robust infrastructure for data collection, storage, and real-time analytics pipelines.</p>
+                        <div class="card-skills">
+                            <span class="badge badge-skill">Python</span>
+                            <span class="badge badge-skill">SQL</span>
+                            <span class="badge badge-skill">Apache Spark</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="career-card">
+                    <div class="card-image-box">
+                        <img src="assets/embedded-icon.png" alt="Hardware Engineer" class="career-card-img">
+                        <div class="career-card-overlay">
+                            <h3 class="career-card-title">Hardware<br>Engineer</h3>
+                        </div>
+                    </div>
+                    <div class="card-expand-details">
+                        <p class="card-desc">Develops computer components, microchips, circuit boards, and custom hardware testing units.</p>
+                        <div class="card-skills">
+                            <span class="badge badge-skill">VHDL</span>
+                            <span class="badge badge-skill">Verilog</span>
+                            <span class="badge badge-skill">PCB Design</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="career-card">
+                    <div class="card-image-box">
+                        <img src="assets/embedded-icon.png" alt="Embedded System Engineer" class="career-card-img">
+                        <div class="career-card-overlay">
+                            <h3 class="career-card-title">Embedded System<br>Engineer</h3>
+                        </div>
+                    </div>
+                    <div class="card-expand-details">
+                        <p class="card-desc">Creates low-level firmware and integrates microprocessors directly into everyday smart hardware devices.</p>
+                        <div class="card-skills">
+                            <span class="badge badge-skill">C/C++</span>
+                            <span class="badge badge-skill">RTOS</span>
+                            <span class="badge badge-skill">ARM Circuitry</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="career-card">
+                    <div class="card-image-box">
+                        <img src="assets/iot-icon.png" alt="IoT Engineer" class="career-card-img">
+                        <div class="career-card-overlay">
+                            <h3 class="career-card-title">IoT<br>Engineer</h3>
+                        </div>
+                    </div>
+                    <div class="card-expand-details">
+                        <p class="card-desc">Architects interconnected smart devices, sensor nodes, and cloud communication channels for IoT environments.</p>
+                        <div class="card-skills">
+                            <span class="badge badge-skill">MQTT</span>
+                            <span class="badge badge-skill">Sensors</span>
+                            <span class="badge badge-skill">Edge Computing</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="career-card">
+                    <div class="card-image-box">
+                        <img src="assets/ai-icon.png" alt="Software Engineer" class="career-card-img">
+                        <div class="career-card-overlay">
+                            <h3 class="career-card-title">Software<br>Engineer</h3>
+                        </div>
+                    </div>
+                    <div class="card-expand-details">
+                        <p class="card-desc">Engineers high-performance application software, backend services, microservices, and computing systems.</p>
+                        <div class="card-skills">
+                            <span class="badge badge-skill">Java</span>
+                            <span class="badge badge-skill">Python</span>
+                            <span class="badge badge-skill">System Arch</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 7 -->
+                <div class="career-card">
+                    <div class="card-image-box">
+                        <img src="assets/cyber-icon.png" alt="Cybersecurity Engineer" class="career-card-img">
+                        <div class="career-card-overlay">
+                            <h3 class="career-card-title">Cybersecurity<br>Engineer</h3>
+                        </div>
+                    </div>
+                    <div class="card-expand-details">
+                        <p class="card-desc">Protects networks, embedded systems, and computing platforms from sophisticated cyber attacks.</p>
+                        <div class="card-skills">
+                            <span class="badge badge-skill">Security</span>
+                            <span class="badge badge-skill">Cryptography</span>
+                            <span class="badge badge-skill">PenTesting</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 8 -->
+                <div class="career-card">
+                    <div class="card-image-box">
+                        <img src="assets/ai-icon.png" alt="AI Specialist" class="career-card-img">
+                        <div class="career-card-overlay">
+                            <h3 class="career-card-title">AI & ML<br>Specialist</h3>
+                        </div>
+                    </div>
+                    <div class="card-expand-details">
+                        <p class="card-desc">Trains deep neural networks, processes large models, and deploys intelligent computer vision systems.</p>
+                        <div class="card-skills">
+                            <span class="badge badge-skill">PyTorch</span>
+                            <span class="badge badge-skill">TensorFlow</span>
+                            <span class="badge badge-skill">Algorithms</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 9 -->
+                <div class="career-card">
+                    <div class="card-image-box">
+                        <img src="assets/iot-icon.png" alt="Network Systems Architect" class="career-card-img">
+                        <div class="career-card-overlay">
+                            <h3 class="career-card-title">Network<br>Architect</h3>
+                        </div>
+                    </div>
+                    <div class="card-expand-details">
+                        <p class="card-desc">Designs enterprise network topology, high-speed data transmission channels, and backbone communications.</p>
+                        <div class="card-skills">
+                            <span class="badge badge-skill">Cisco</span>
+                            <span class="badge badge-skill">5G</span>
+                            <span class="badge badge-skill">Fiber Optics</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <button class="carousel-arrow arrow-right" id="nextBtn" type="button">
+                <i class="fa-solid fa-chevron-right"></i>
+            </button>
+        </div>
+
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
