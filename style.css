@@ -128,6 +128,67 @@ header {
     color: #FFFFFF;
 }
 
+/* Dropdown Container */
+.nav-dropdown {
+    position: relative;
+}
+
+.dropdown-arrow {
+    font-size: 0.75rem;
+    transition: transform 0.3s ease;
+}
+
+.nav-dropdown:hover .dropdown-arrow {
+    transform: rotate(180deg);
+}
+
+/* Glassmorphism Sub-Menu */
+.custom-dropdown {
+    display: block; /* Managed by opacity/visibility for smooth transitions */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 190px;
+    background: rgba(5, 2, 15, 0.95);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 12px;
+    padding: 8px 0;
+    margin-top: 6px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 15px rgba(232, 112, 194, 0.15);
+    
+    /* Hidden state */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+    z-index: 1050;
+}
+
+/* Show on Hover */
+.nav-dropdown:hover .custom-dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* Sub-items Styling */
+.custom-dropdown .dropdown-item {
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 500;
+    font-size: 0.9rem;
+    padding: 8px 18px;
+    transition: all 0.25s ease;
+    background: transparent;
+}
+
+.custom-dropdown .dropdown-item:hover {
+    color: #FFFFFF;
+    background: rgba(232, 112, 194, 0.15);
+    padding-left: 22px;
+}
+
 /* Hero Section */
 .hero-section {
     min-height: calc(100vh - 120px);
@@ -256,16 +317,11 @@ margin-left: -170px;
 
 /* Gradient Text (White -> #5C6FF4 -> #E870C2) */
 .gradient-text {
-    background: linear-gradient(
-        135deg, 
-        #FFFFFF 0%, 
-        #5C6FF4 55%, 
-        #E870C2 100%
-    );
+    background: linear-gradient(135deg, #FFFFFF 0%, #5C6FF4 55%, #E870C2 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    background-clip: text;
     display: inline-block;
-    padding-bottom: 0.1em;
 }
 
 /* Horizontal Dividing Line */
@@ -1325,4 +1381,246 @@ margin-left: -170px;
     opacity: 0.4;
     filter: blur(2px) grayscale(40%);
     transform: scale(0.95);
+}
+
+
+/* ==========================================================================
+   CPE AT UE PAGE STYLES (ISOLATED - GLOW REMOVED)
+   ========================================================================== */
+
+/* Page Base */
+.cpe-page-body {
+    background-color: #05020F;
+    color: #FFFFFF;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+/* Hero Section Base */
+.cpe-hero-section {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background-image: url('assets/temp1.jpg');
+    background-size: cover;
+    background-position: center right;
+    background-repeat: no-repeat;
+}
+
+/* Left Fade Overlay */
+.cpe-hero-section .hero-overlay-fade {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg, 
+        rgba(5, 2, 15, 0.98) 0%, 
+        rgba(5, 2, 15, 0.90) 35%, 
+        rgba(5, 2, 15, 0.50) 60%, 
+        rgba(5, 2, 15, 0.10) 100%
+    );
+    z-index: 1;
+}
+
+/* Content Container */
+.cpe-hero-section .hero-content-container {
+    position: relative;
+    z-index: 2;
+    padding-top: 100px;
+}
+
+.cpe-hero-section .hero-text-col {
+    padding-left: 20px;
+}
+
+/* Typography & Color Overrides for CPE Page Hero */
+body.cpe-page-body .cpe-hero-section .hero-title {
+    color: #FFFFFF !important;
+    background: none !important;
+    -webkit-background-clip: unset !important;
+    -webkit-text-fill-color: #FFFFFF !important;
+    filter: none !important; /* Removes drop-shadow glow */
+    font-size: 3.5rem;
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 24px;
+    letter-spacing: -0.5px;
+}
+
+/* Red Highlight Text for CPE Page */
+body.cpe-page-body .cpe-hero-section .hero-title .highlight-text,
+body.cpe-page-body .cpe-hero-section span.highlight-text {
+    color: #FF2E4C !important;
+    -webkit-text-fill-color: #FF2E4C !important;
+    filter: none !important; /* Removes drop-shadow glow */
+    display: block;
+}
+
+.cpe-hero-section .hero-description {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.85);
+    max-width: 520px;
+    font-weight: 400;
+}
+
+/* Bottom Red Accent Line (Flat design, glow box-shadow removed) */
+.cpe-hero-section .hero-bottom-line {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 20px;
+    background: #E63946;
+    box-shadow: none; /* Removed purple/red ambient glow */
+    z-index: 3;
+}
+
+/* Responsive Scaling */
+@media (max-width: 768px) {
+    body.cpe-page-body .cpe-hero-section .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .cpe-hero-section .hero-overlay-fade {
+        background: rgba(5, 2, 15, 0.85);
+    }
+}
+
+/* ==========================================================================
+   UE MANILA SECTION
+   ========================================================================== */
+
+.ue-manila-section {
+    position: relative;
+    width: 100%;
+    min-height: 80vh;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding-bottom: 4rem;
+    
+    /* Background Image Setup */
+    background-image: url('assets/temp1.jpg'); /* Update path to your UE Manila building image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Gradient Overlay (Darkens the bottom into solid page background) */
+.ue-manila-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        180deg, 
+        rgba(5, 2, 15, 0.2) 0%, 
+        rgba(5, 2, 15, 0.6) 60%, 
+        #05020F 100%
+    );
+    z-index: 1;
+}
+
+/* Section Content Container */
+.ue-manila-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+
+/* Typography Styling */
+.ue-manila-heading {
+    font-size: clamp(3rem, 6vw, 5.2rem);
+    font-weight: 800;
+    color: #FFFFFF;
+    letter-spacing: -1px;
+    margin: 0;
+}
+
+.ue-manila-heading .highlight-red {
+    color: #E63946; /* Matching UE Signature Red */
+}
+
+/* Responsive Scaling */
+@media (max-width: 768px) {
+    .ue-manila-section {
+        min-height: 50vh;
+        padding-bottom: 2rem;
+    }
+}
+
+/* ==========================================================================
+   PROGRAM OBJECTIVES & SCHOLARSHIP SECTION
+   ========================================================================== */
+
+.cpe-features-section {
+    position: relative;
+    width: 100%;
+    background-color: #05020F;
+    padding-top: 2rem;
+    padding-bottom: 5rem;
+}
+
+.cpe-feature-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.cpe-feature-card:hover {
+    transform: translateY(-8px);
+}
+
+.feature-img-box {
+    width: 100%;
+    height: 440px;
+    border-radius: 28px;
+    overflow: hidden;
+    background: #000;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.7);
+}
+
+.feature-img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.feature-card-title {
+    color: #FFFFFF;
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.15;
+    margin-top: 1.5rem;
+    letter-spacing: -0.5px;
+}
+
+/* Guaranteed Visible Red Bar */
+.cpe-features-section .features-red-bar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 20px;
+    background: linear-gradient(90deg, #800000 0%, #FF2E4C 50%, #800000 100%);
+    z-index: 10;
+}
+
+@media (max-width: 768px) {
+    .feature-img-box {
+        height: 320px;
+    }
+    .feature-card-title {
+        font-size: 1.6rem;
+    }
 }

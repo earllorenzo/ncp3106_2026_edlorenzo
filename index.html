@@ -22,44 +22,41 @@
     <div class="glow glow-purple"></div>
     <div class="glow glow-blue"></div>
 
-    <!-- Header Navbar Section -->
-    <header class="container-fluid px-4 px-md-5 pt-4">
-        <nav class="navbar navbar-expand-lg glass-navbar px-3 px-md-4 py-2">
-            <div class="container-fluid p-0 d-flex justify-content-between align-items-center">
-                
-                <!-- Logo -->
-                <a class="navbar-brand d-flex align-items-center gap-2 text-white fw-bold me-4" href="index.html">
-                    <img src="assets/cpelogo.png" alt="CpE Logo" class="logo-img">
-                    <span>CpE</span>
-                </a>
+    <!-- Fixed Header Navbar -->
+<header class="fixed-top container-fluid px-4 px-md-5 pt-4">
+    <nav class="navbar navbar-expand-lg glass-navbar px-3 px-md-4 py-2">
+        <div class="container-fluid p-0 d-flex justify-content-between align-items-center">
+            <a class="navbar-brand d-flex align-items-center gap-2 text-white fw-bold me-4" href="index.html">
+                <img src="assets/cpelogo.png" alt="CpE Logo" class="logo-img">
+                <span>CpE</span>
+            </a>
+            <button class="navbar-toggler navbar-dark border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav gap-lg-4">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">HOME</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">ABOUT</a></li>
+                    
+                    <!-- CPE AT UE DROPDOWN BUTTON -->
+                    <li class="nav-item nav-dropdown">
+                        <a class="nav-link dropdown-trigger d-flex align-items-center gap-1" href="cpe-at-ue.html">
+                            CPE AT UE <span class="dropdown-arrow">▾</span>
+                        </a>
+                        <div class="dropdown-menu custom-dropdown">
+                            <a class="dropdown-item" href="faculty.html">Faculty</a>
+                            <a class="dropdown-item" href="extracurriculars.html">Extracurriculars</a>
+                        </div>
+                    </li>
 
-                <!-- Mobile Toggler -->
-                <button 
-                    class="navbar-toggler navbar-dark border-0" 
-                    type="button" 
-                    data-bs-toggle="collapse" 
-                    data-bs-target="#navbarNav"
-                    aria-controls="navbarNav"
-                    aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <!-- Navigation Links -->
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav gap-lg-4">
-                        <li class="nav-item"><a class="nav-link active" href="index.html">HOME</a></li>
-                        <li class="nav-item"><a class="nav-link" href="about.html">ABOUT</a></li>
-                        <li class="nav-item"><a class="nav-link" href="cpe-at-ue.html">CPE AT UE</a></li>
-                        <li class="nav-item"><a class="nav-link" href="fields.html">FIELDS</a></li>
-                        <li class="nav-item"><a class="nav-link" href="careers.html">CAREERS</a></li>
-                        <li class="nav-item"><a class="nav-link" href="faqs.html">FAQs</a></li>
-                    </ul>
-                </div>
-
+                    <li class="nav-item"><a class="nav-link" href="fields.html">FIELDS</a></li>
+                    <li class="nav-item"><a class="nav-link" href="careers.html">CAREERS</a></li>
+                    <li class="nav-item"><a class="nav-link" href="faqs.html">FAQs</a></li>
+                </ul>
             </div>
-        </nav>
-    </header>
+        </div>
+    </nav>
+</header>
 
     <!-- Hero Section -->
 <main class="hero-section container-fluid px-4 px-md-5 d-flex align-items-center position-relative">
