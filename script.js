@@ -337,4 +337,4 @@ function resetBgTimer() {
 // Start on document load
 document.addEventListener('DOMContentLoaded', () => {
     startBgSlideshow();
-});
+d});
