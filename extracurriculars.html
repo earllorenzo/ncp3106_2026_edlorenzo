@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CpE - Extracurriculars</title>
+    
+    <!-- Fonts & Bootstrap -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="extracurriculars-body">
+
+    <!-- Fixed Header Navbar -->
+    <header class="fixed-top container-fluid px-4 px-md-5 pt-4">
+        <nav class="navbar navbar-expand-lg glass-navbar px-3 px-md-4 py-2">
+            <div class="container-fluid p-0 d-flex justify-content-between align-items-center">
+                <a class="navbar-brand d-flex align-items-center gap-2 text-white fw-bold me-4" href="index.html">
+                    <img src="assets/cpelogo.png" alt="CpE Logo" class="logo-img">
+                    <span>CpE</span>
+                </a>
+                <button class="navbar-toggler navbar-dark border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav gap-lg-4">
+                        <li class="nav-item"><a class="nav-link" href="index.html">HOME</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">ABOUT</a></li>
+                        
+                        <!-- CPE AT UE DROPDOWN BUTTON -->
+                        <li class="nav-item nav-dropdown">
+                            <a class="nav-link dropdown-trigger d-flex align-items-center gap-1 active" href="cpe-at-ue.html">
+                                CPE AT UE <span class="dropdown-arrow">▾</span>
+                            </a>
+                            <div class="dropdown-menu custom-dropdown">
+                                <a class="dropdown-item" href="faculty.html">Faculty</a>
+                                <a class="dropdown-item active" href="extracurriculars.html">Extracurriculars</a>
+                            </div>
+                        </li>
+
+                        <li class="nav-item"><a class="nav-link" href="fields.html">FIELDS</a></li>
+                        <li class="nav-item"><a class="nav-link" href="careers.html">CAREERS</a></li>
+                        <li class="nav-item"><a class="nav-link" href="faqs.html">FAQs</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- First Hero Section with Centered Levitating Asset -->
+    <section class="extra-hero-section d-flex align-items-center position-relative">
+        <div class="container-fluid px-4 px-md-5 w-100 position-relative z-1">
+            <div class="row align-items-center h-100 g-4">
+                
+                <!-- Left Title Block -->
+                <div class="col-lg-5 d-flex flex-column justify-content-between extra-left-col">
+                    <h1 class="extra-main-title left-title fw-black text-white">
+                        SOCIETY<br>OF
+                    </h1>
+                    <div class="extra-sub-label">
+                        <h2 class="extra-chapter-text fw-bold text-white mb-0">SCPES – UE MANILA</h2>
+                    </div>
+                </div>
+
+                <!-- Right Title Block -->
+                <div class="col-lg-7 text-lg-end extra-right-col d-flex align-items-end justify-content-end">
+                    <h1 class="extra-main-title right-title fw-black text-white">
+                        COMPUTER<br>ENGINEERING<br>STUDENTS
+                    </h1>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Centered Levitating Image -->
+        <div class="extra-levitating-wrapper">
+            <img src="assets/scpes logo.png" alt="SCPES Logo" class="extra-levitating-img">
+        </div>
+    </section>
+
+    <!-- Executives Carousel Section -->
+    <div class="exec-carousel-wrapper">
+        <button class="carousel-arrow arrow-left" id="execPrevBtn" type="button">
+            <i class="fa-solid fa-chevron-left"></i>
+        </button>
+
+        <div class="exec-carousel-track" id="execCarouselTrack">
+            
+            <!-- Card 1 -->
+            <div class="executive-card">
+                <div class="exec-card-image-box">
+                    <img src="assets/temp1.jpg" alt="Firstname Lastname" class="executive-card-img">
+                    <div class="executive-card-overlay">
+                        <h3 class="executive-card-title">Firstname Lastname<br><span class="executive-role">President</span></h3>
+                    </div>
+                </div>
+                <div class="exec-card-expand-details">
+                    <p class="executive-card-desc">Leads the student organization and oversees all academic and extracurricular initiatives.</p>
+                    <div class="executive-card-skills">
+                        <span class="executive-badge-skill">Leadership</span>
+                        <span class="executive-badge-skill">Strategy</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="executive-card">
+                <div class="exec-card-image-box">
+                    <img src="assets/temp1.jpg" alt="Firstname Lastname" class="executive-card-img">
+                    <div class="executive-card-overlay">
+                        <h3 class="executive-card-title">Firstname Lastname<br><span class="executive-role">Vice President</span></h3>
+                    </div>
+                </div>
+                <div class="exec-card-expand-details">
+                    <p class="executive-card-desc">Supports internal operations and coordinates inter-departmental projects.</p>
+                    <div class="executive-card-skills">
+                        <span class="executive-badge-skill">Operations</span>
+                        <span class="executive-badge-skill">Management</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="executive-card">
+                <div class="exec-card-image-box">
+                    <img src="assets/temp1.jpg" alt="Firstname Lastname" class="executive-card-img">
+                    <div class="executive-card-overlay">
+                        <h3 class="executive-card-title">Firstname Lastname<br><span class="executive-role">Secretary</span></h3>
+                    </div>
+                </div>
+                <div class="exec-card-expand-details">
+                    <p class="executive-card-desc">Manages documentation, meeting logs, and official records of the organization.</p>
+                    <div class="executive-card-skills">
+                        <span class="executive-badge-skill">Documentation</span>
+                        <span class="executive-badge-skill">Organization</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="executive-card">
+                <div class="exec-card-image-box">
+                    <img src="assets/temp1.jpg" alt="Firstname Lastname" class="executive-card-img">
+                    <div class="executive-card-overlay">
+                        <h3 class="executive-card-title">Firstname Lastname<br><span class="executive-role">Treasurer</span></h3>
+                    </div>
+                </div>
+                <div class="exec-card-expand-details">
+                    <p class="executive-card-desc">Handles financial budgeting, tracking expenses, and sponsorship audits.</p>
+                    <div class="executive-card-skills">
+                        <span class="executive-badge-skill">Finance</span>
+                        <span class="executive-badge-skill">Budgeting</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="executive-card">
+                <div class="exec-card-image-box">
+                    <img src="assets/temp1.jpg" alt="Firstname Lastname" class="executive-card-img">
+                    <div class="executive-card-overlay">
+                        <h3 class="executive-card-title">Firstname Lastname<br><span class="executive-role">Auditor</span></h3>
+                    </div>
+                </div>
+                <div class="exec-card-expand-details">
+                    <p class="executive-card-desc">Reviews financial transactions and ensures transparency across all accounts.</p>
+                    <div class="executive-card-skills">
+                        <span class="executive-badge-skill">Accounting</span>
+                        <span class="executive-badge-skill">Compliance</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 6 -->
+            <div class="executive-card">
+                <div class="exec-card-image-box">
+                    <img src="assets/temp1.jpg" alt="Firstname Lastname" class="executive-card-img">
+                    <div class="executive-card-overlay">
+                        <h3 class="executive-card-title">Firstname Lastname<br><span class="executive-role">P.R.O.</span></h3>
+                    </div>
+                </div>
+                <div class="exec-card-expand-details">
+                    <p class="executive-card-desc">Handles public relations, announcements, and communications channels.</p>
+                    <div class="executive-card-skills">
+                        <span class="executive-badge-skill">Communications</span>
+                        <span class="executive-badge-skill">Media</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 7 -->
+            <div class="executive-card">
+                <div class="exec-card-image-box">
+                    <img src="assets/temp1.jpg" alt="Firstname Lastname" class="executive-card-img">
+                    <div class="executive-card-overlay">
+                        <h3 class="executive-card-title">Firstname Lastname<br><span class="executive-role">Committee Head</span></h3>
+                    </div>
+                </div>
+                <div class="exec-card-expand-details">
+                    <p class="executive-card-desc">Oversees technical logistics and workshop planning for members.</p>
+                    <div class="executive-card-skills">
+                        <span class="executive-badge-skill">Logistics</span>
+                        <span class="executive-badge-skill">Planning</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 8 -->
+            <div class="executive-card">
+                <div class="exec-card-image-box">
+                    <img src="assets/temp1.jpg" alt="Firstname Lastname" class="executive-card-img">
+                    <div class="executive-card-overlay">
+                        <h3 class="executive-card-title">Firstname Lastname<br><span class="executive-role">Technical Lead</span></h3>
+                    </div>
+                </div>
+                <div class="exec-card-expand-details">
+                    <p class="executive-card-desc">Directs hardware development and software tool builds for department use.</p>
+                    <div class="executive-card-skills">
+                        <span class="executive-badge-skill">Engineering</span>
+                        <span class="executive-badge-skill">Development</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 9 -->
+            <div class="executive-card">
+                <div class="exec-card-image-box">
+                    <img src="assets/temp1.jpg" alt="Firstname Lastname" class="executive-card-img">
+                    <div class="executive-card-overlay">
+                        <h3 class="executive-card-title">Firstname Lastname<br><span class="executive-role">Creative Director</span></h3>
+                    </div>
+                </div>
+                <div class="exec-card-expand-details">
+                    <p class="executive-card-desc">Manages visual assets, branding guidelines, and promotional materials.</p>
+                    <div class="executive-card-skills">
+                        <span class="executive-badge-skill">Design</span>
+                        <span class="executive-badge-skill">Branding</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 10 -->
+            <div class="executive-card">
+                <div class="exec-card-image-box">
+                    <img src="assets/temp1.jpg" alt="Firstname Lastname" class="executive-card-img">
+                    <div class="executive-card-overlay">
+                        <h3 class="executive-card-title">Firstname Lastname<br><span class="executive-role">Logistics Officer</span></h3>
+                    </div>
+                </div>
+                <div class="exec-card-expand-details">
+                    <p class="executive-card-desc">Coordinates venue setups, equipment handling, and event transport.</p>
+                    <div class="executive-card-skills">
+                        <span class="executive-badge-skill">Operations</span>
+                        <span class="executive-badge-skill">Coordination</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 11 -->
+            <div class="executive-card">
+                <div class="exec-card-image-box">
+                    <img src="assets/temp1.jpg" alt="Firstname Lastname" class="executive-card-img">
+                    <div class="executive-card-overlay">
+                        <h3 class="executive-card-title">Firstname Lastname<br><span class="executive-role">External Affairs</span></h3>
+                    </div>
+                </div>
+                <div class="exec-card-expand-details">
+                    <p class="executive-card-desc">Builds partnerships with external chapters and corporate sponsors.</p>
+                    <div class="executive-card-skills">
+                        <span class="executive-badge-skill">Networking</span>
+                        <span class="executive-badge-skill">Partnerships</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 12 -->
+            <div class="executive-card">
+                <div class="exec-card-image-box">
+                    <img src="assets/temp1.jpg" alt="Firstname Lastname" class="executive-card-img">
+                    <div class="executive-card-overlay">
+                        <h3 class="executive-card-title">Firstname Lastname<br><span class="executive-role">Internal Affairs</span></h3>
+                    </div>
+                </div>
+                <div class="exec-card-expand-details">
+                    <p class="executive-card-desc">Ensures smooth student member relations and member engagement programs.</p>
+                    <div class="executive-card-skills">
+                        <span class="executive-badge-skill">Engagement</span>
+                        <span class="executive-badge-skill">Community</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 13 -->
+            <div class="executive-card">
+                <div class="exec-card-image-box">
+                    <img src="assets/temp1.jpg" alt="Firstname Lastname" class="executive-card-img">
+                    <div class="executive-card-overlay">
+                        <h3 class="executive-card-title">Firstname Lastname<br><span class="executive-role">Adviser Representative</span></h3>
+                    </div>
+                </div>
+                <div class="exec-card-expand-details">
+                    <p class="executive-card-desc">Acts as a direct liaison between student board members and faculty advisers.</p>
+                    <div class="executive-card-skills">
+                        <span class="executive-badge-skill">Liaison</span>
+                        <span class="executive-badge-skill">Mentorship</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <button class="carousel-arrow arrow-right" id="execNextBtn" type="button">
+            <i class="fa-solid fa-chevron-right"></i>
+        </button>
+    </div>
+
+    <!-- Recent Highlights Section -->
+    <section class="recent-highlights-section py-5 my-5">
+        <div class="container-fluid px-4 px-md-5">
+            
+            <!-- Section Header (Right Aligned with Gradient Text) -->
+            <div class="d-flex justify-content-end mb-5">
+                <h2 class="fw-bold display-6 mb-0 text-end">
+                    <span class="gradient-recent">Recent</span> 
+                    <span class="text-white">Highlights</span>
+                </h2>
+            </div>
+
+            <!-- Highlights Container (4 Cards Alternating) -->
+            <div class="highlights-grid d-flex flex-column gap-4">
+                
+                <!-- Highlight Row 1 (Image Left, Text Right) -->
+                <div class="row g-0 align-items-center bg-black border border-secondary border-opacity-25 rounded overflow-hidden">
+                    <div class="col-lg-6">
+                        <div class="highlight-img-wrapper h-100">
+                            <img src="assets/temp1.jpg" alt="Event Image 1" class="w-100 h-100 object-fit-cover" style="min-height: 280px;">
+                        </div>
+                    </div>
+                    <div class="col-lg-6 p-4 p-lg-5 d-flex flex-column justify-content-center">
+                        <h3 class="text-white fw-bold fs-3 mb-2">EVENT TITLE 1</h3>
+                        <p class="text-light opacity-75 mb-0">
+                            Provide a brief description or text overview of the first event, workshop, or milestone achieved.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Highlight Row 2 (Text Left, Image Right) -->
+                <div class="row g-0 align-items-center bg-black border border-secondary border-opacity-25 rounded overflow-hidden flex-lg-row-reverse">
+                    <div class="col-lg-6">
+                        <div class="highlight-img-wrapper h-100">
+                            <img src="assets/temp1.jpg" alt="Event Image 2" class="w-100 h-100 object-fit-cover" style="min-height: 280px;">
+                        </div>
+                    </div>
+                    <div class="col-lg-6 p-4 p-lg-5 d-flex flex-column justify-content-center text-lg-end">
+                        <h3 class="text-white fw-bold fs-3 mb-2">EVENT TITLE 2</h3>
+                        <p class="text-light opacity-75 mb-0">
+                            Provide a brief description or text overview of the second event, competition, or student activity.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Highlight Row 3 (Image Left, Text Right) -->
+                <div class="row g-0 align-items-center bg-black border border-secondary border-opacity-25 rounded overflow-hidden">
+                    <div class="col-lg-6">
+                        <div class="highlight-img-wrapper h-100">
+                            <img src="assets/temp1.jpg" alt="Event Image 3" class="w-100 h-100 object-fit-cover" style="min-height: 280px;">
+                        </div>
+                    </div>
+                    <div class="col-lg-6 p-4 p-lg-5 d-flex flex-column justify-content-center">
+                        <h3 class="text-white fw-bold fs-3 mb-2">EVENT TITLE 3</h3>
+                        <p class="text-light opacity-75 mb-0">
+                            Provide a brief description or text overview of the third technical seminar or organization project.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Highlight Row 4 (Text Left, Image Right) -->
+                <div class="row g-0 align-items-center bg-black border border-secondary border-opacity-25 rounded overflow-hidden flex-lg-row-reverse">
+                    <div class="col-lg-6">
+                        <div class="highlight-img-wrapper h-100">
+                            <img src="assets/temp1.jpg" alt="Event Image 4" class="w-100 h-100 object-fit-cover" style="min-height: 280px;">
+                        </div>
+                    </div>
+                    <div class="col-lg-6 p-4 p-lg-5 d-flex flex-column justify-content-center text-lg-end">
+                        <h3 class="text-white fw-bold fs-3 mb-2">EVENT TITLE 4</h3>
+                        <p class="text-light opacity-75 mb-0">
+                            Provide a brief description or text overview of the fourth community outreach or convention highlight.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+<!-- ================================================================
+         ORGANIZATION PROJECTS & INITIATIVES
+         ================================================================ -->
+    <section class="org-achievements-section py-5">
+        <div class="container text-center">
+            <h2 class="achievements-heading mb-5">
+                Organization Projects and <span class="highlight-red">Achievements</span>
+            </h2>
+
+            <div class="achievements-grid">
+                <div class="grid-item item-1">
+                    <img src="assets/temp1.jpg" alt="Org Initiative 1" class="gallery-clickable-img" data-full-img="assets/org1.jpg">
+                </div>
+                <div class="grid-item item-2">
+                    <img src="assets/org2.jpg" alt="Org Initiative 2" class="gallery-clickable-img" data-full-img="assets/org2.jpg">
+                </div>
+                <div class="grid-item item-3">
+                    <img src="assets/org3.jpg" alt="Org Initiative 3" class="gallery-clickable-img" data-full-img="assets/org3.jpg">
+                </div>
+                <div class="grid-item item-4">
+                    <img src="assets/org4.jpg" alt="Org Initiative 4" class="gallery-clickable-img" data-full-img="assets/org4.jpg">
+                </div>
+                <div class="grid-item item-5">
+                    <img src="assets/org5.jpg" alt="Org Initiative 5" class="gallery-clickable-img" data-full-img="assets/org5.jpg">
+                </div>
+                <div class="grid-item item-6">
+                    <img src="assets/org6.jpg" alt="Org Initiative 6" class="gallery-clickable-img" data-full-img="assets/org6.jpg">
+                </div>
+                <div class="grid-item item-7">
+                    <img src="assets/temp1.jpg" alt="Org Initiative 7" class="gallery-clickable-img" data-full-img="assets/temp1.jpg">
+                </div>
+                <div class="grid-item item-8">
+                    <img src="assets/org8.jpg" alt="Org Initiative 8" class="gallery-clickable-img" data-full-img="assets/org8.jpg">
+                </div>
+                <div class="grid-item item-9">
+                    <img src="assets/org9.jpg" alt="Org Initiative 9" class="gallery-clickable-img" data-full-img="assets/org9.jpg">
+                </div>
+                <div class="grid-item item-10">
+                    <img src="assets/temp1.jpg" alt="Org Initiative 10" class="gallery-clickable-img" data-full-img="assets/temp1.jpg">
+                </div>
+                <div class="grid-item item-11">
+                    <img src="assets/temp1.jpg" alt="Org Initiative 11" class="gallery-clickable-img" data-full-img="assets/temp1.jpg">
+                </div>
+                <div class="grid-item item-12">
+                    <img src="assets/org12.jpg" alt="Org Initiative 12" class="gallery-clickable-img" data-full-img="assets/org12.jpg">
+                </div>
+                <div class="grid-item item-13">
+                    <img src="assets/temp1.jpg" alt="Org Initiative 13" class="gallery-clickable-img" data-full-img="assets/temp1.jpg">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================================================================
+         ORG IMAGE LIGHTBOX MODAL
+         ================================================================ -->
+    <div class="modal fade" id="imageLightboxModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content bg-transparent border-0 text-center">
+                <div class="modal-header border-0 p-0 justify-content-end mb-2">
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-0 position-relative">
+                    <img id="lightboxImage" src="" class="img-fluid rounded-3 shadow-lg" alt="Enlarged view">
+                    <p id="lightboxCaption" class="text-white-50 mt-3 font-monospace"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+               
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

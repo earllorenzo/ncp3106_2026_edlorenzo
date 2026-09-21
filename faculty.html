@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CpE - Faculty Members</title>
+    
+    <!-- Fonts & Bootstrap -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="faculty-body">
+
+    <!-- Fixed Header Navbar -->
+    <header class="fixed-top container-fluid px-4 px-md-5 pt-4">
+        <nav class="navbar navbar-expand-lg glass-navbar px-3 px-md-4 py-2">
+            <div class="container-fluid p-0 d-flex justify-content-between align-items-center">
+                <a class="navbar-brand d-flex align-items-center gap-2 text-white fw-bold me-4" href="index.html">
+                    <img src="assets/cpelogo.png" alt="CpE Logo" class="logo-img">
+                    <span>CpE</span>
+                </a>
+                <button class="navbar-toggler navbar-dark border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav gap-lg-4">
+                        <li class="nav-item"><a class="nav-link" href="index.html">HOME</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">ABOUT</a></li>
+                        
+                        <!-- CPE AT UE DROPDOWN BUTTON -->
+                        <li class="nav-item nav-dropdown">
+                            <a class="nav-link dropdown-trigger d-flex align-items-center gap-1 active" href="cpe-at-ue.html">
+                                CPE AT UE <span class="dropdown-arrow">▾</span>
+                            </a>
+                            <div class="dropdown-menu custom-dropdown">
+                                <a class="dropdown-item active" href="faculty.html">Faculty</a>
+                                <a class="dropdown-item" href="extracurriculars.html">Extracurriculars</a>
+                            </div>
+                        </li>
+
+                        <li class="nav-item"><a class="nav-link" href="fields.html">FIELDS</a></li>
+                        <li class="nav-item"><a class="nav-link" href="careers.html">CAREERS</a></li>
+                        <li class="nav-item"><a class="nav-link" href="faqs.html">FAQs</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Container -->
+    <main class="faculty-hero d-flex flex-column justify-content-between">
+        
+        <div class="container-fluid px-4 px-md-5 mt-auto mb-3">
+            <h1 class="hero-title fw-bold text-white mb-2">Meet the Faculty</h1>
+            <p class="faculty-subtitle text-white text-opacity-75">
+                The people Meet the educators who guide, challenge, and inspire the next generation of Computer Engineers. Our faculty brings knowledge and experience into the classroom, helping students turn concepts into practical skills and real-world solutions.
+            </p>
+        </div>
+
+        <div class="faculty-carousel-wrapper">
+            
+            <button class="carousel-arrow arrow-left" id="facultyPrevBtn" type="button">
+                <i class="fa-solid fa-chevron-left"></i>
+            </button>
+
+            <!-- Faculty Draggable Track -->
+            <div class="faculty-carousel-track" id="facultyCarouselTrack">
+                
+                <!-- Faculty Card 1 -->
+                <div class="faculty-card">
+                    <div class="card-image-box">
+                        <img src="assets/temp1.jpg" alt="Engr. EJ Antonio" class="faculty-card-img">
+                        <div class="faculty-card-overlay">
+                            <h3 class="faculty-card-title">Engr. EJ Antonio<br><span class="faculty-role">Department Chair - Professor</span></h3>
+                        </div>
+                    </div>
+                    <div class="card-expand-details">
+                        <p class="card-desc">Specializes in Embedded Systems, Machine Learning Architectures, and Advanced Computer Networks.</p>
+                        <div class="card-skills">
+                            <span class="badge badge-skill">PhD in CpE</span>
+                            <span class="badge badge-skill">Embedded Systems</span>
+                            <span class="badge badge-skill">AI Research</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Faculty Card 2 -->
+                <div class="faculty-card">
+                    <div class="card-image-box">
+                        <img src="assets/temp1.jpg" alt="Engr. Mary Ann L. Limkian" class="faculty-card-img">
+                        <div class="faculty-card-overlay">
+                            <h3 class="faculty-card-title">Engr. Mary Ann L. Limkian<br><span class="faculty-role">Professor</span></h3>
+                        </div>
+                    </div>
+                    <div class="card-expand-details">
+                        <p class="card-desc">Expert in Digital Logic Design, Microprocessors, and VLSI circuit architecture.</p>
+                        <div class="card-skills">
+                            <span class="badge badge-skill">PCpE</span>
+                            <span class="badge badge-skill">MEng</span>
+                            <span class="badge badge-skill">CpE</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Faculty Card 3 -->
+                <div class="faculty-card">
+                    <div class="card-image-box">
+                        <img src="assets/temp1.jpg" alt="Engr. Joemhel Coral" class="faculty-card-img">
+                        <div class="faculty-card-overlay">
+                            <h3 class="faculty-card-title">Engr. Joemhel Coral<br><span class="faculty-role">Professor</span></h3>
+                        </div>
+                    </div>
+                    <div class="card-expand-details">
+                        <p class="card-desc">Focuses on Cloud Infrastructure, IoT Protocols, and Distributed Computing systems.</p>
+                        <div class="card-skills">
+                            <span class="badge badge-skill">M.Sc. SE</span>
+                            <span class="badge badge-skill">IoT Protocols</span>
+                            <span class="badge badge-skill">Cloud Computing</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Faculty Card 4 -->
+                <div class="faculty-card">
+                    <div class="card-image-box">
+                        <img src="assets/temp1.jpg" alt="Engr. Onofre Corpuz" class="faculty-card-img">
+                        <div class="faculty-card-overlay">
+                            <h3 class="faculty-card-title">Engr. Onofre Corpuz<br><span class="faculty-role">Professor</span></h3>
+                        </div>
+                    </div>
+                    <div class="card-expand-details">
+                        <p class="card-desc">Teaches introductory programming, hardware design laboratories, and embedded C.</p>
+                        <div class="card-skills">
+                            <span class="badge badge-skill">BS CpE</span>
+                            <span class="badge badge-skill">Embedded C</span>
+                            <span class="badge badge-skill">Hardware Labs</span>
+                        </div>
+                    </div>
+                </div>
+
+
+            <button class="carousel-arrow arrow-right" id="facultyNextBtn" type="button">
+                <i class="fa-solid fa-chevron-right"></i>
+            </button>
+        </div>
+
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

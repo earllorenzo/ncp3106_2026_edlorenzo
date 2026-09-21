@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,18 +11,25 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
     <!-- Bootstrap JS Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
-
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
+
 <body class="cpe-page-body">
-    
-    <!-- Header Navigation -->
+
+    <!-- ================================================================
+         HEADER NAVIGATION
+         ================================================================ -->
     <header class="fixed-top container-fluid px-4 px-md-5 pt-4">
         <nav class="navbar navbar-expand-lg glass-navbar px-3 px-md-4 py-2">
             <div class="container-fluid p-0 d-flex justify-content-between align-items-center">
@@ -29,18 +37,25 @@
                     <img src="assets/cpelogo.png" alt="CpE Logo" class="logo-img">
                     <span>CpE</span>
                 </a>
+
                 <button class="navbar-toggler navbar-dark border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                     <span class="navbar-toggler-icon"></span>
                 </button>
+
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav gap-lg-4">
-                        <li class="nav-item"><a class="nav-link" href="index.html">HOME</a></li>
-                        <li class="nav-item"><a class="nav-link" href="about.html">ABOUT</a></li>
-                        
-                        <!-- ACTIVE CPE AT UE DROPDOWN -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">HOME</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">ABOUT</a>
+                        </li>
+
+                        <!-- CPE AT UE DROPDOWN -->
                         <li class="nav-item nav-dropdown">
                             <a class="nav-link dropdown-trigger active d-flex align-items-center gap-1" href="cpe-at-ue.html">
-                                CPE AT UE <span class="dropdown-arrow">▾</span>
+                                CPE AT UE
+                                <span class="dropdown-arrow">▾</span>
                             </a>
                             <div class="dropdown-menu custom-dropdown">
                                 <a class="dropdown-item" href="faculty.html">Faculty</a>
@@ -48,16 +63,25 @@
                             </div>
                         </li>
 
-                        <li class="nav-item"><a class="nav-link" href="fields.html">FIELDS</a></li>
-                        <li class="nav-item"><a class="nav-link" href="careers.html">CAREERS</a></li>
-                        <li class="nav-item"><a class="nav-link" href="faqs.html">FAQs</a></li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="fields.html">FIELDS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="careers.html">CAREERS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="faqs.html">FAQs</a>
+                        </li>
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
 
-    <!-- Sub-header Section -->
+
+    <!-- ================================================================
+         UE MANILA SUB HEADER
+         ================================================================ -->
     <section class="ue-manila-section">
         <div class="ue-manila-overlay"></div>
         <div class="container ue-manila-content">
@@ -67,349 +91,331 @@
         </div>
     </section>
 
-<section class="cpe-hero-section">
 
-  <!-- Background Image Slides -->
-  <div class="bg-slideshow-container">
-    <div class="bg-slide active" style="background-image: url('assets/temp1.jpg');"></div>
-    <div class="bg-slide" style="background-image: url('assets/1stpagecpeatue.jpg');"></div>
-    <div class="bg-slide" style="background-image: url('assets/workshop.png');"></div>
-  </div>
-
-  <!-- Fade Overlay (Top, Left, Bottom) -->
-  <div class="hero-overlay-fade"></div>
-
-  <!-- Content Container -->
-  <div class="container hero-content-container">
-    <div class="row">
-      <div class="col-lg-7 hero-text-col">
-        <h1 class="hero-title">
-            <span class="title-line-white">Bachelor of</span>
-            <span class="title-line-white">Science in</span>
-            <span class="highlight-text">Computer<br>Engineering</span>
-        </h1>
-        <p class="hero-description">
-          The BS Computer Engineering program at the University of the East combines hardware, software, mathematics, 
-          and engineering into a 4-year course. Preparing students to design and develop modern computing systems 
-          through hands-on learning and projects.
-      </div>
-    </div>
-  </div>
-
-  <!-- Indicator Dots -->
-  <div class="hero-dots-container">
-    <span class="hero-dot active" onclick="goToBgSlide(0)"></span>
-    <span class="hero-dot" onclick="goToBgSlide(1)"></span>
-    <span class="hero-dot" onclick="goToBgSlide(2)"></span>
-  </div>
-
-  <!-- Bottom Accent Line -->
-  <div class="hero-bottom-line"></div>
-
-</section>
-
-<!-- ==========================================================================
-     PROGRAM OBJECTIVES & SCHOLARSHIPS SECTION
-     ========================================================================== -->
-<section class="info-split-section">
-  <div class="info-container">
-    
-    <!-- LEFT SIDE: Sticky Sidebar Header & Toggle Switch -->
-    <div class="info-left-col">
-      <h2 class="info-main-title" id="tabMainTitle">
-        Program <br><span class="highlight-text">Objectives</span>
-      </h2>
-      <p class="info-sub-desc" id="tabSubDesc">
-        Discover the key learning outcomes and career objectives designed for Computer Engineering students.
-      </p>
-
-      <!-- Toggle Pill Switch Buttons -->
-      <div class="tab-pill-switch">
-        <button class="pill-btn active" id="btnObjectives">
-          OBJECTIVES
-        </button>
-        <button class="pill-btn" id="btnScholarships">
-          SCHOLARSHIPS
-        </button>
-      </div>
-    </div>
-
-    <!-- CENTER: Vertical Line with Centered Timeline Dots -->
-    <div class="info-vertical-line">
-      <div class="timeline-dot active" id="dot-0"></div>
-      <div class="timeline-dot" id="dot-1"></div>
-      <div class="timeline-dot" id="dot-2"></div>
-      <div class="timeline-dot" id="dot-3"></div>
-    </div>
-
-    <!-- RIGHT SIDE: Scrollable Content Groups -->
-    <div class="info-right-col">
-      
-      <!-- 1. OBJECTIVES CONTENT GROUP (Active by Default) -->
-      <div class="tab-content-group active" id="groupObjectives">
-        
-        <div class="timeline-item active" data-index="0">
-          <span class="step-num">01</span>
-          <h3 class="step-title">Technical Expertise</h3>
-          <p class="step-desc">
-            Master fundamental and advanced principles in computer systems engineering, embedded hardware design, software development, and network architecture to solve complex real-world technical problems.
-          </p>
+    <!-- ================================================================
+         HERO SECTION
+         ================================================================ -->
+    <section class="cpe-hero-section">
+        <div class="bg-slideshow-container">
+            <div class="bg-slide active" style="background-image: url('assets/temp1.jpg');"></div>
+            <div class="bg-slide" style="background-image: url('assets/1stpagecpeatue.jpg');"></div>
+            <div class="bg-slide" style="background-image: url('assets/workshop.png');"></div>
         </div>
 
-        <div class="timeline-item" data-index="1">
-          <span class="step-num">02</span>
-          <h3 class="step-title">Professional Leadership</h3>
-          <p class="step-desc">
-            Demonstrate strong leadership, ethical integrity, effective communication, and collaborative teamwork while managing multi-disciplinary engineering projects in global enterprise environments.
-          </p>
-        </div>
+        <div class="hero-overlay-fade"></div>
 
-        <div class="timeline-item" data-index="2">
-          <span class="step-num">03</span>
-          <h3 class="step-title">Innovation & Research</h3>
-          <p class="step-desc">
-            Engage in groundbreaking research and technological innovation across artificial intelligence, Internet of Things (IoT), robotics, and cybersecurity to advance societal and industrial development.
-          </p>
-        </div>
+        <div class="container hero-content-container">
+            <div class="row">
+                <div class="col-lg-7 hero-text-col">
+                    <h1 class="hero-title">
+                        <span class="title-line-white">Bachelor of</span>
+                        <span class="title-line-white">Science in</span>
+                        <span class="highlight-text">Computer<br>Engineering</span>
+                    </h1>
 
-        <div class="timeline-item" data-index="3">
-          <span class="step-num">04</span>
-          <h3 class="step-title">Lifelong Learning</h3>
-          <p class="step-desc">
-            Adapt to evolving technological trends and maintain continuous professional development through graduate studies, specialized industry certifications, and independent technical mastery.
-          </p>
-        </div>
-
-      </div>
-
-      <!-- 2. SCHOLARSHIPS CONTENT GROUP (Hidden by Default) -->
-      <div class="tab-content-group" id="groupScholarships">
-        
-        <div class="timeline-item" data-index="0">
-          <span class="step-num">01</span>
-          <h3 class="step-title">Academic Honor Scholarship</h3>
-          <p class="step-desc">
-            Full to partial tuition fee discounts awarded to high-performing engineering students who maintain exemplary Grade Point Averages (GPA) and demonstrate outstanding academic diligence.
-          </p>
-        </div>
-
-        <div class="timeline-item" data-index="1">
-          <span class="step-num">02</span>
-          <h3 class="step-title">Alumni Foundation Grant</h3>
-          <p class="step-desc">
-            Financial aid assistance sponsored by Computer Engineering alumni networks, dedicated to supporting senior-year students with capstone thesis research and prototype hardware development.
-          </p>
-        </div>
-
-        <div class="timeline-item" data-index="2">
-          <span class="step-num">03</span>
-          <h3 class="step-title">Corporate Industry Subsidy</h3>
-          <p class="step-desc">
-            Direct industry sponsorships offered in partnership with tech corporations, providing monthly living stipends, paid internship placements, and guaranteed employment opportunities upon graduation.
-          </p>
-        </div>
-
-        <div class="timeline-item" data-index="3">
-          <span class="step-num">04</span>
-          <h3 class="step-title">Student Needs Assistance</h3>
-          <p class="step-desc">
-            Need-based financial grants and technology equipment allowances designed to ensure deserving engineering students receive equal access to required hardware, software, and learning tools.
-          </p>
-        </div>
-
-      </div>
-
-    </div>
-
-  </div>
-</section>
-
-    <!-- Featured Videos Section -->
-    <section class="cpe-video-section py-5 position-relative">
-        <div class="container text-center mb-4">
-            <h2 class="section-title text-white fw-bold">Featured <span class="text-danger">Videos</span></h2>
-        </div>
-
-        <!-- Endless Scrolling Wrapper -->
-        <div class="video-cards-wrapper">
-            <div class="video-cards-track">
-                
-                <!-- FIRST SET OF CARDS -->
-                <div class="video-card" data-video-src="assets/">
-                    <img src="https://picsum.photos/400/600?random=1" alt="CpE Campus Tour">
-                    <div class="play-btn-overlay"><div class="play-icon">▶</div></div>
-                    <div class="card-caption">CpE Campus Tour</div>
+                    <p class="hero-description">
+                        The BS Computer Engineering program at the University of the East combines hardware, software, mathematics, and engineering into a 4-year course. Preparing students to design and develop modern computing systems through hands-on learning and projects.
+                    </p>
                 </div>
-
-                <div class="video-card" data-video-src="assets/videos/research_colloquium.mp4">
-                    <img src="https://picsum.photos/400/600?random=2" alt="Research Colloquium">
-                    <div class="play-btn-overlay"><div class="play-icon">▶</div></div>
-                    <div class="card-caption">Research Colloquium</div>
-                </div>
-
-                <div class="video-card" data-video-src="assets/videos/student_life.mp4">
-                    <img src="https://picsum.photos/400/600?random=3" alt="Student Life at UE">
-                    <div class="play-btn-overlay"><div class="play-icon">▶</div></div>
-                    <div class="card-caption">Student Life at UE</div>
-                </div>
-
-                <div class="video-card" data-video-src="assets/videos/cpe_projects.mp4">
-                    <img src="https://picsum.photos/400/600?random=4" alt="CpE Projects">
-                    <div class="play-btn-overlay"><div class="play-icon">▶</div></div>
-                    <div class="card-caption">CpE Projects</div>
-                </div>
-
-                <div class="video-card" data-video-src="assets/videos/quiz_bee.mp4">
-                    <img src="https://picsum.photos/400/600?random=5" alt="Inter-School Quiz Bee">
-                    <div class="play-btn-overlay"><div class="play-icon">▶</div></div>
-                    <div class="card-caption">Inter-School Quiz Bee</div>
-                </div>
-
-                <!-- DUPLICATE SET (REQUIRED FOR SEAMLESS LOOPING) -->
-                <div class="video-card" data-video-src="assets/0908.mp4">
-                    <img src="https://picsum.photos/400/600?random=1" alt="CpE Campus Tour">
-                    <div class="play-btn-overlay"><div class="play-icon">▶</div></div>
-                    <div class="card-caption">CpE Campus Tour</div>
-                </div>
-
-                <div class="video-card" data-video-src="assets/videos/research_colloquium.mp4">
-                    <img src="https://picsum.photos/400/600?random=2" alt="Research Colloquium">
-                    <div class="play-btn-overlay"><div class="play-icon">▶</div></div>
-                    <div class="card-caption">Research Colloquium</div>
-                </div>
-
-                <div class="video-card" data-video-src="assets/videos/student_life.mp4">
-                    <img src="https://picsum.photos/400/600?random=3" alt="Student Life at UE">
-                    <div class="play-btn-overlay"><div class="play-icon">▶</div></div>
-                    <div class="card-caption">Student Life at UE</div>
-                </div>
-
-                <div class="video-card" data-video-src="assets/videos/cpe_projects.mp4">
-                    <img src="https://picsum.photos/400/600?random=4" alt="CpE Projects">
-                    <div class="play-btn-overlay"><div class="play-icon">▶</div></div>
-                    <div class="card-caption">CpE Projects</div>
-                </div>
-
-                <div class="video-card" data-video-src="assets/videos/quiz_bee.mp4">
-                    <img src="https://picsum.photos/400/600?random=5" alt="Inter-School Quiz Bee">
-                    <div class="play-btn-overlay"><div class="play-icon">▶</div></div>
-                    <div class="card-caption">Inter-School Quiz Bee</div>
-                </div>
-
             </div>
         </div>
 
-        <!-- Red Bottom Line Accent -->
-        <div class="features-red-bar"></div>
+        <div class="hero-dots-container">
+            <span class="hero-dot active" onclick="goToBgSlide(0)"></span>
+            <span class="hero-dot" onclick="goToBgSlide(1)"></span>
+            <span class="hero-dot" onclick="goToBgSlide(2)"></span>
+        </div>
+
+        <div class="hero-bottom-line"></div>
     </section>
 
-<!-- ==========================================================================
-   STUDENT PROJECTS AND ACHIEVEMENTS GALLERY SECTION
-   ========================================================================== -->
-<section class="student-achievements-section">
-    <div class="container text-center">
-        <!-- Title Header -->
-<h2 class="achievements-heading">
-    Student Projects and <span class="highlight-red">Achievements</span>
-</h2>
 
-        <!-- Asymmetric Bento Grid -->
-        <div class="achievements-grid">
-            <!-- Row 1 -->
-            <div class="grid-item item-1">
-                <img src="assets/temp1.jpg" alt="Student Project 1" class="gallery-clickable-img" data-full-img="assets/temp1.jpg">
-            </div>
-            <div class="grid-item item-2">
-                <img src="assets/project2.jpg" alt="Student Project 2" class="gallery-clickable-img" data-full-img="assets/project2.jpg">
-            </div>
-            <div class="grid-item item-3">
-                <img src="assets/project3.jpg" alt="Student Project 3" class="gallery-clickable-img" data-full-img="assets/project3.jpg">
-            </div>
-            <div class="grid-item item-4">
-                <img src="assets/project4.jpg" alt="Student Project 4" class="gallery-clickable-img" data-full-img="assets/project4.jpg">
-            </div>
-            <div class="grid-item item-5">
-                <img src="assets/project5.jpg" alt="Student Project 5" class="gallery-clickable-img" data-full-img="assets/project5.jpg">
+    <!-- ================================================================
+         PROGRAM OBJECTIVES & SCHOLARSHIPS
+         ================================================================ -->
+    <section class="info-split-section">
+        <div class="info-container">
+
+            <!-- LEFT SIDE -->
+            <div class="info-left-col">
+                <h2 class="info-main-title" id="tabMainTitle">
+                    Program <br>
+                    <span class="highlight-text">Objectives</span>
+                </h2>
+
+                <p class="info-sub-desc" id="tabSubDesc">
+                    Discover the key learning outcomes and career objectives designed for Computer Engineering students.
+                </p>
+
+                <div class="tab-pill-switch">
+                    <button class="pill-btn active" id="btnObjectives">OBJECTIVES</button>
+                    <button class="pill-btn" id="btnScholarships">SCHOLARSHIPS</button>
+                </div>
             </div>
 
-            <!-- Row 2 / Middle Block -->
-            <div class="grid-item item-6">
-                <img src="assets/project6.jpg" alt="Student Project 6" class="gallery-clickable-img" data-full-img="assets/project6.jpg">
-            </div>
-            <div class="grid-item item-7">
-                <img src="assets/project7.jpg" alt="Student Project 7" class="gallery-clickable-img" data-full-img="assets/project7.jpg">
-            </div>
-            <div class="grid-item item-8">
-                <img src="assets/project8.jpg" alt="Student Project 8" class="gallery-clickable-img" data-full-img="assets/project8.jpg">
-            </div>
-            <div class="grid-item item-9">
-                <img src="assets/project9.jpg" alt="Student Project 9" class="gallery-clickable-img" data-full-img="assets/project9.jpg">
+            <!-- CENTER TIMELINE -->
+            <div class="info-vertical-line">
+                <div class="timeline-dot active" id="dot-0"></div>
+                <div class="timeline-dot" id="dot-1"></div>
+                <div class="timeline-dot" id="dot-2"></div>
+                <div class="timeline-dot" id="dot-3"></div>
             </div>
 
-            <!-- Bottom Row Items -->
-            <div class="grid-item item-10">
-                <img src="assets/temp1.jpg" alt="Student Project 10" class="gallery-clickable-img" data-full-img="assets/temp1.jpg">
+            <!-- RIGHT SIDE CONTENT -->
+            <div class="info-right-col">
+
+                <!-- OBJECTIVES CONTENT -->
+                <div class="tab-content-group active" id="groupObjectives">
+                    <div class="timeline-item active" data-index="0">
+                        <span class="step-num">01</span>
+                        <h3 class="step-title">Technical Expertise</h3>
+                        <p class="step-desc">
+                            Master fundamental and advanced principles in computer systems engineering, embedded hardware design, software development, and network architecture to solve complex real-world technical problems.
+                        </p>
+                    </div>
+
+                    <div class="timeline-item" data-index="1">
+                        <span class="step-num">02</span>
+                        <h3 class="step-title">Professional Leadership</h3>
+                        <p class="step-desc">
+                            Demonstrate strong leadership, ethical integrity, effective communication, and collaborative teamwork while managing multi-disciplinary engineering projects in global enterprise environments.
+                        </p>
+                    </div>
+
+                    <div class="timeline-item" data-index="2">
+                        <span class="step-num">03</span>
+                        <h3 class="step-title">Innovation & Research</h3>
+                        <p class="step-desc">
+                            Engage in groundbreaking research and technological innovation across artificial intelligence, Internet of Things (IoT), robotics, and cybersecurity to advance societal and industrial development.
+                        </p>
+                    </div>
+
+                    <div class="timeline-item" data-index="3">
+                        <span class="step-num">04</span>
+                        <h3 class="step-title">Lifelong Learning</h3>
+                        <p class="step-desc">
+                            Adapt to evolving technological trends and maintain continuous professional development through graduate studies, specialized industry certifications, and independent technical mastery.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- SCHOLARSHIPS CONTENT -->
+                <div class="tab-content-group" id="groupScholarships">
+                    <div class="timeline-item" data-index="0">
+                        <span class="step-num">01</span>
+                        <h3 class="step-title">Academic Honor Scholarship</h3>
+                        <p class="step-desc">
+                            Full to partial tuition fee discounts awarded to high-performing engineering students who maintain exemplary Grade Point Averages (GPA) and demonstrate outstanding academic diligence.
+                        </p>
+                    </div>
+
+                    <div class="timeline-item" data-index="1">
+                        <span class="step-num">02</span>
+                        <h3 class="step-title">Alumni Foundation Grant</h3>
+                        <p class="step-desc">
+                            Financial aid assistance sponsored by Computer Engineering alumni networks, dedicated to supporting senior-year students with capstone thesis research and prototype hardware development.
+                        </p>
+                    </div>
+
+                    <div class="timeline-item" data-index="2">
+                        <span class="step-num">03</span>
+                        <h3 class="step-title">Corporate Industry Subsidy</h3>
+                        <p class="step-desc">
+                            Direct industry sponsorships offered in partnership with tech corporations, providing monthly living stipends, paid internship placements, and guaranteed employment opportunities upon graduation.
+                        </p>
+                    </div>
+
+                    <div class="timeline-item" data-index="3">
+                        <span class="step-num">04</span>
+                        <h3 class="step-title">Student Needs Assistance</h3>
+                        <p class="step-desc">
+                            Need-based financial grants and technology equipment allowances designed to ensure deserving engineering students receive equal access to required hardware, software, and learning tools.
+                        </p>
+                    </div>
+                </div>
+
             </div>
-            <div class="grid-item item-11">
-                <img src="assets/project11.jpg" alt="Student Project 11" class="gallery-clickable-img" data-full-img="assets/project11.jpg">
+        </div>
+    </section>
+
+
+    <!-- ================================================================
+         FEATURED VIDEOS (GOOGLE DRIVE HOSTED)
+         ================================================================ -->
+    <section class="cpe-videos-section py-5">
+        <div class="container px-4 px-md-5">
+
+            <div class="text-center mb-5">
+                <h2 class="section-title text-white fw-bold">Featured Videos</h2>
+                <p class="section-subtitle text-white-50">
+                    Explore highlights, student projects, and event showcases from our Computer Engineering program.
+                </p>
             </div>
-            <div class="grid-item item-12">
-                <img src="assets/project12.jpg" alt="Student Project 12" class="gallery-clickable-img" data-full-img="assets/project12.jpg">
+
+            <div class="row g-4 justify-content-center">
+
+                <!-- VIDEO 1 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="video-card custom-video-card" 
+                         data-drive-src="https://drive.google.com/file/d/1GLnMqRpMAbKmnJwWeYwvo6tqWDjTpyE7/preview">
+                        <div class="video-thumb-wrapper">
+                            <img src="assets/temp1.jpg" alt="CpE Program Overview" class="video-thumb-img">
+                            <div class="play-btn-overlay">
+                                <i class="fa-solid fa-play"></i>
+                            </div>
+                        </div>
+                        <div class="video-card-body">
+                            <h4 class="video-title">CpE Program Overview</h4>
+                            <p class="video-desc">
+                                A deep dive into the Computer Engineering curriculum, laboratories, and career opportunities.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- VIDEO 2 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="video-card custom-video-card" 
+                         data-drive-src="https://drive.google.com/file/d/1GLnMqRpMAbKmnJwWeYwvo6tqWDjTpyE7/preview">
+                        <div class="video-thumb-wrapper">
+                            <img src="assets/temp1.jpg" alt="Student Innovations" class="video-thumb-img">
+                            <div class="play-btn-overlay">
+                                <i class="fa-solid fa-play"></i>
+                            </div>
+                        </div>
+                        <div class="video-card-body">
+                            <h4 class="video-title">Student Innovations & Expo</h4>
+                            <p class="video-desc">
+                                Discover student projects featuring IoT, robotics, embedded systems, and AI.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- VIDEO 3 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="video-card custom-video-card" 
+                         data-drive-src="https://drive.google.com/file/d/1GLnMqRpMAbKmnJwWeYwvo6tqWDjTpyE7/preview">
+                        <div class="video-thumb-wrapper">
+                            <img src="assets/temp1.jpg" alt="CpE Campus Events" class="video-thumb-img">
+                            <div class="play-btn-overlay">
+                                <i class="fa-solid fa-play"></i>
+                            </div>
+                        </div>
+                        <div class="video-card-body">
+                            <h4 class="video-title">CpE Campus Events</h4>
+                            <p class="video-desc">
+                                Highlights from engineering events, hackathons, and student activities.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
             </div>
-            <div class="grid-item item-13">
-                <img src="assets/project13.jpg" alt="Student Project 13" class="gallery-clickable-img" data-full-img="assets/project13.jpg">
+
+        </div>
+    </section>
+
+
+    <!-- ================================================================
+         STUDENT PROJECTS & ACHIEVEMENTS
+         ================================================================ -->
+    <section class="student-achievements-section">
+        <div class="container text-center">
+            <h2 class="achievements-heading">
+                Student Projects and <span class="highlight-red">Achievements</span>
+            </h2>
+
+            <div class="achievements-grid">
+                <div class="grid-item item-1">
+                    <img src="assets/temp1.jpg" alt="Student Project 1" class="gallery-clickable-img" data-full-img="assets/temp1.jpg">
+                </div>
+                <div class="grid-item item-2">
+                    <img src="assets/temp1.jpg" alt="Student Project 2" class="gallery-clickable-img" data-full-img="assets/temp1.jpg">
+                </div>
+                <div class="grid-item item-3">
+                    <img src="assets/temp1.jpg" alt="Student Project 3" class="gallery-clickable-img" data-full-img="assets/temp1.jpg">
+                </div>
+                <div class="grid-item item-4">
+                    <img src="assets/temp1.jpg" alt="Student Project 4" class="gallery-clickable-img" data-full-img="assets/temp1.jpg">
+                </div>
+                <div class="grid-item item-5">
+                    <img src="assets/project5.jpg" alt="Student Project 5" class="gallery-clickable-img" data-full-img="assets/project5.jpg">
+                </div>
+                <div class="grid-item item-6">
+                    <img src="assets/project6.jpg" alt="Student Project 6" class="gallery-clickable-img" data-full-img="assets/project6.jpg">
+                </div>
+                <div class="grid-item item-7">
+                    <img src="assets/project7.jpg" alt="Student Project 7" class="gallery-clickable-img" data-full-img="assets/project7.jpg">
+                </div>
+                <div class="grid-item item-8">
+                    <img src="assets/project8.jpg" alt="Student Project 8" class="gallery-clickable-img" data-full-img="assets/project8.jpg">
+                </div>
+                <div class="grid-item item-9">
+                    <img src="assets/project9.jpg" alt="Student Project 9" class="gallery-clickable-img" data-full-img="assets/project9.jpg">
+                </div>
+                <div class="grid-item item-10">
+                    <img src="assets/temp1.jpg" alt="Student Project 10" class="gallery-clickable-img" data-full-img="assets/temp1.jpg">
+                </div>
+                <div class="grid-item item-11">
+                    <img src="assets/temp1.jpg" alt="Student Project 11" class="gallery-clickable-img" data-full-img="assets/temp1.jpg">
+                </div>
+                <div class="grid-item item-12">
+                    <img src="assets/temp1.jpg" alt="Student Project 12" class="gallery-clickable-img" data-full-img="assets/temp1.jpg">
+                </div>
+                <div class="grid-item item-13">
+                    <img src="assets/temp1.jpg" alt="Student Project 13" class="gallery-clickable-img" data-full-img="assets/temp1.jpg">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ================================================================
+         VIDEO MODAL (FOR GOOGLE DRIVE)
+         ================================================================ -->
+    <div class="modal fade" id="cpeVideoModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content bg-dark text-white border-0">
+                <div class="modal-header border-0 pb-0">
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-3">
+                    <div class="ratio ratio-16x9">
+                        <iframe id="mainDrivePlayer" 
+                                src="" 
+                                title="Google Drive video player" 
+                                frameborder="0" 
+                                allow="autoplay; encrypted-media" 
+                                allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-</section>
-
-<!-- Image Pop-up Modal -->
-<div class="modal fade" id="galleryLightboxModal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-xl">
-        <div class="modal-content border-0">
-            <div class="modal-header border-0">
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body p-0 text-center">
-                <img id="modalFullImage" src="" alt="Full Preview" style="max-width: 100%; max-height: 85vh; object-fit: contain;">
-            </div>
-        </div>
-    </div>
-</div>
 
 
-    <!-- Image Lightbox Modal -->
+    <!-- ================================================================
+         IMAGE LIGHTBOX MODAL
+         ================================================================ -->
     <div class="modal fade" id="imageLightboxModal" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-xl">
             <div class="modal-content bg-transparent border-0 text-center">
-                <div class="modal-header border-0 pb-0 justify-content-end">
+                <div class="modal-header border-0 p-0 justify-content-end mb-2">
                     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body p-2 position-relative">
-                    <img id="lightboxImage" src="" alt="Expanded View" class="img-fluid rounded-4 shadow-lg" style="max-height: 85vh; object-fit: contain;">
-                    <h5 id="lightboxCaption" class="text-white mt-3 fw-bold"></h5>
+                <div class="modal-body p-0 position-relative">
+                    <img id="lightboxImage" src="" class="img-fluid rounded-3 shadow-lg" alt="Enlarged view">
+                    <p id="lightboxCaption" class="text-white-50 mt-3 font-monospace"></p>
                 </div>
             </div>
         </div>
     </div>
 
-<!-- Native HTML5 Video Pop-up Modal -->
-<div class="modal fade" id="cpeVideoModal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content border-0">
-            <!-- Top Right Close 'X' Button -->
-            <div class="modal-header border-0">
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <!-- Video Player Container -->
-            <div class="modal-body p-0 d-flex justify-content-center align-items-center">
-                <video id="mainVideoPlayer" controls playsinline>
-                    Your browser does not support HTML5 video.
-                </video>
-            </div>
-        </div>
-    </div>
-</div>
+
+    <!-- Scripts -->
     <script src="script.js"></script>
 </body>
+
 </html>
