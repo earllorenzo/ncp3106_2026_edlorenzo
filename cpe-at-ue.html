@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CPE at UE - Computer Engineering</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+</head>
+
+<body class="cpe-page-body">
+
+    <!-- ================================================================
+         HEADER NAVIGATION
+         ================================================================ -->
+    <header class="fixed-top container-fluid px-4 px-md-5 pt-4">
+        <nav class="navbar navbar-expand-lg glass-navbar px-3 px-md-4 py-2">
+            <div class="container-fluid p-0 d-flex justify-content-between align-items-center">
+                <a class="navbar-brand d-flex align-items-center gap-2 text-white fw-bold me-4" href="index.html">
+                    <img src="assets/cpelogo.png" alt="CpE Logo" class="logo-img">
+                    <span>CpE</span>
+                </a>
+
+                <button class="navbar-toggler navbar-dark border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav gap-lg-4">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">HOME</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">ABOUT</a>
+                        </li>
+
+                        <!-- CPE AT UE DROPDOWN -->
+                        <li class="nav-item nav-dropdown">
+                            <a class="nav-link dropdown-trigger active d-flex align-items-center gap-1" href="cpe-at-ue.html">
+                                CPE AT UE
+                                <span class="dropdown-arrow">▾</span>
+                            </a>
+                            <div class="dropdown-menu custom-dropdown">
+                                <a class="dropdown-item" href="faculty.html">Faculty</a>
+                                <a class="dropdown-item" href="extracurriculars.html">Extracurriculars</a>
+                            </div>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="fields.html">FIELDS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="careers.html">CAREERS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="faqs.html">FAQs</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+    <!-- ================================================================
+         UE MANILA SUB HEADER
+         ================================================================ -->
+    <section class="ue-manila-section">
+        <div class="ue-manila-overlay"></div>
+        <div class="container ue-manila-content">
+            <h2 class="ue-manila-heading">
+                CpE in <span class="highlight-red">UE - Manila</span>
+            </h2>
+        </div>
+    </section>
+
+
+    <!-- ================================================================
+         HERO SECTION
+         ================================================================ -->
+    <section class="cpe-hero-section">
+        <div class="bg-slideshow-container">
+            <div class="bg-slide active" style="background-image: url('assets/bscpe1.jpg');"></div>
+            <div class="bg-slide" style="background-image: url('assets/bscpe2.jpg');"></div>
+            <div class="bg-slide" style="background-image: url('assets/bscpe3.jpg')"></div>
+            <div class="bg-slide" style="background-image: url('assets/bscpe4.jpg')"></div>
+        </div>
+
+        <div class="hero-overlay-fade"></div>
+
+        <div class="container hero-content-container">
+            <div class="row">
+                <div class="col-lg-7 hero-text-col">
+                    <h1 class="hero-title">
+                        <span class="title-line-white">Bachelor of</span>
+                        <span class="title-line-white">Science in</span>
+                        <span class="highlight-text">Computer<br>Engineering</span>
+                    </h1>
+
+                    <p class="hero-description">
+                        The BS Computer Engineering program at the University of the East combines hardware, software, mathematics, and engineering into a 4-year course. Preparing students to design and develop modern computing systems through hands-on learning and projects.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero-dots-container">
+            <span class="hero-dot active" onclick="goToBgSlide(0)"></span>
+            <span class="hero-dot" onclick="goToBgSlide(1)"></span>
+            <span class="hero-dot" onclick="goToBgSlide(2)"></span>
+            <span class="hero-dot" onclick="goToBgSlide(3)"></span>
+        </div>
+
+        <div class="hero-bottom-line"></div>
+    </section>
+
+
+    <!-- ================================================================
+         PROGRAM OBJECTIVES & SCHOLARSHIPS
+         ================================================================ -->
+    <section class="info-split-section">
+        <div class="info-container">
+
+            <!-- LEFT SIDE -->
+            <div class="info-left-col">
+                <h2 class="info-main-title" id="tabMainTitle">
+                    Program <br>
+                    <span class="highlight-text">Objectives</span>
+                </h2>
+
+                <p class="info-sub-desc" id="tabSubDesc">
+                    Discover the key learning outcomes and career objectives designed for Computer Engineering students.
+                </p>
+
+                <div class="tab-pill-switch">
+                    <button class="pill-btn active" id="btnObjectives">OBJECTIVES</button>
+                    <button class="pill-btn" id="btnScholarships">SCHOLARSHIPS</button>
+                </div>
+            </div>
+
+            <!-- CENTER TIMELINE -->
+            <div class="info-vertical-line">
+                <div class="timeline-dot active" id="dot-0"></div>
+                <div class="timeline-dot" id="dot-1"></div>
+                <div class="timeline-dot" id="dot-2"></div>
+                <div class="timeline-dot" id="dot-3"></div>
+            </div>
+
+            <!-- RIGHT SIDE CONTENT -->
+            <div class="info-right-col">
+
+                <!-- OBJECTIVES CONTENT -->
+                <div class="tab-content-group active" id="groupObjectives">
+                    <div class="timeline-item active" data-index="0">
+                        <span class="step-num">01</span>
+                        <h3 class="step-title">Technical Expertise</h3>
+                        <p class="step-desc">
+                            Master fundamental and advanced principles in computer systems engineering, embedded hardware design, software development, and network architecture to solve complex real-world technical problems.
+                        </p>
+                    </div>
+
+                    <div class="timeline-item" data-index="1">
+                        <span class="step-num">02</span>
+                        <h3 class="step-title">Professional Leadership</h3>
+                        <p class="step-desc">
+                            Demonstrate strong leadership, ethical integrity, effective communication, and collaborative teamwork while managing multi-disciplinary engineering projects in global enterprise environments.
+                        </p>
+                    </div>
+
+                    <div class="timeline-item" data-index="2">
+                        <span class="step-num">03</span>
+                        <h3 class="step-title">Innovation & Research</h3>
+                        <p class="step-desc">
+                            Engage in groundbreaking research and technological innovation across artificial intelligence, Internet of Things (IoT), robotics, and cybersecurity to advance societal and industrial development.
+                        </p>
+                    </div>
+
+                    <div class="timeline-item" data-index="3">
+                        <span class="step-num">04</span>
+                        <h3 class="step-title">Lifelong Learning</h3>
+                        <p class="step-desc">
+                            Adapt to evolving technological trends and maintain continuous professional development through graduate studies, specialized industry certifications, and independent technical mastery.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- SCHOLARSHIPS CONTENT -->
+                <div class="tab-content-group" id="groupScholarships">
+                    <div class="timeline-item" data-index="0">
+                        <span class="step-num">01</span>
+                        <h3 class="step-title">UE-Tan Yan Kee Foundation, Inc. Scholarship</h3>
+                        <p class="step-desc">
+                            For qualified incoming freshmen pursuing selected degree programs. Benefits include 100% free tuition and miscellaneous fees, book allowance, uniform subsidy, transportation allowance, and monthly stipend.
+                    </div>
+
+                    <div class="timeline-item" data-index="1">
+                        <span class="step-num">02</span>
+                        <h3 class="step-title">Athletic & Cultural Service Grants </h3>
+                        <p class="step-desc">
+                            For students with outstanding athletic or artistic abilities who qualify for the UE Pep Squad, UAAP-level competition, UE Band, UE Chorale, UE Drama Company, or UE Silanganan Dance Troupe.
+                        </p>
+                    </div>
+
+                    <div class="timeline-item" data-index="2">
+                        <span class="step-num">03</span>
+                        <h3 class="step-title">University Scholarship</h3>
+                        <p class="step-desc">
+                            [100% free tuition and miscellaneous fees] — Awarded for one semester, renewal every semester, to UE undergraduate students with a grade point average (GPA) of 1.0000 to 1.2500.
+                    </div>
+
+                    <div class="timeline-item" data-index="3">
+                        <span class="step-num">04</span>
+                        <h3 class="step-title">College Scholarship</h3>
+                        <p class="step-desc">
+                            [50% free tuition and miscellaneous fees] — Awarded for one semester, renewal every semester, to UE undergraduate students with a Grade Point Average (GPA) of 1.2501 to 1.5000.
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ================================================================
+         FEATURED VIDEOS (GOOGLE DRIVE HOSTED)
+         ================================================================ -->
+    <section class="cpe-videos-section py-5">
+        <div class="container px-4 px-md-5">
+
+            <div class="text-center mb-5">
+                <h2 class="section-title text-white fw-bold">Featured Videos</h2>
+                <p class="section-subtitle text-white-50">
+                    Explore highlights, student projects, and event showcases from our Computer Engineering program.
+                </p>
+            </div>
+
+            <div class="row g-4 justify-content-center">
+
+                <!-- VIDEO 1 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="video-card custom-video-card" 
+                         data-drive-src="https://drive.google.com/file/d/1oLHtJInnzyVxOFYPc7sRIwi3wtASDXuq/preview">
+                        <div class="video-thumb-wrapper">
+                            <img src="assets/student projects and achievements/sp (10).jpg" alt="CpE Program Overview" class="video-thumb-img">
+                            <div class="play-btn-overlay">
+                                <i class="fa-solid fa-play"></i>
+                            </div>
+                        </div>
+                        <div class="video-card-body">
+                            <h4 class="video-title">Senior CpE students take the win! 🏆</h4>
+                            <p class="video-desc">
+                               First Place at Packet Hacks 2025 IoT Con! 🎉
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- VIDEO 2 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="video-card custom-video-card" 
+                         data-drive-src="https://drive.google.com/file/d/1cASSrHA_3jqTWE9ILzRSWZgzaFfFcp-h/preview">
+                        <div class="video-thumb-wrapper">
+                            <img src="assets/student projects and achievements/techcon_front.jpg" alt="Student Innovations" class="video-thumb-img">
+                            <div class="play-btn-overlay">
+                                <i class="fa-solid fa-play"></i>
+                            </div>
+                        </div>
+                        <div class="video-card-body">
+                            <h4 class="video-title">TechCon 2025: The AI-volution</h4>
+                            <p class="video-desc">
+                                Take a look back at the highlights, exciting moments, and unforgettable memories from TechCon 2025.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- VIDEO 3 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="video-card custom-video-card" 
+                         data-drive-src="https://drive.google.com/file/d/1iqOkX2yDe41LmOD5EP8amaFO9-FcSk2D/preview">
+                        <div class="video-thumb-wrapper">
+                            <img src="assets/scpes/scpes (1).jpg" alt="CpE Campus Events" class="video-thumb-img">
+                            <div class="play-btn-overlay">
+                                <i class="fa-solid fa-play"></i>
+                            </div>
+                        </div>
+                        <div class="video-card-body">
+                            <h4 class="video-title">What is Computer Engineering?</h4>
+                            <p class="video-desc">
+                                Get to know the people, experiences, and opportunities that make Computer Engineering what it is—from the students behind the program to the skills, projects, and challenges that come with being a CpE student. 💻🚀
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- ================================================================
+         STUDENT PROJECTS & ACHIEVEMENTS
+         ================================================================ -->
+    <section class="student-achievements-section">
+        <div class="container text-center">
+            <h2 class="achievements-heading">
+                Student Projects and <span class="highlight-red">Achievements</span>
+            </h2>
+
+            <div class="achievements-grid">
+                <div class="grid-item item-1">
+                    <img src="assets/student projects and achievements/sp (6).jpg" alt="" class="gallery-clickable-img" data-full-img="assets/student projects and achievements/sp (6).jpg">
+                </div>
+                <div class="grid-item item-2">
+                    <img src="assets/student projects and achievements/sp (21).jpg" alt="💡𝐉𝐮𝐧𝐢𝐨𝐫 𝐂𝐏𝐄 𝐒𝐭𝐮𝐝𝐞𝐧𝐭𝐬 𝐆𝐨 𝐁𝐞𝐲𝐨𝐧𝐝 𝐁𝐨𝐫𝐝𝐞𝐫𝐬 𝐚𝐭 𝐑𝐒𝐓𝐖 𝟐𝟎𝟐𝟔!" class="gallery-clickable-img" data-full-img="assets/student projects and achievements/sp (21).jpg">
+                </div>
+                <div class="grid-item item-3">
+                    <img src="assets/student projects and achievements/sp (4).jpg" class="gallery-clickable-img" data-full-img="assets/student projects and achievements/sp (4).jpg">
+                </div>
+                <div class="grid-item item-4">
+                    <img src="assets/student projects and achievements/sp (12).jpg" alt="" class="gallery-clickable-img" data-full-img="assets/student projects and achievements/sp (12).jpg">
+                </div>
+                <div class="grid-item item-5">
+                    <img src="assets/student projects and achievements/sp (18).jpg" alt="" class="gallery-clickable-img" data-full-img="assets/student projects and achievements/sp (3).jpg">
+                </div>
+                <div class="grid-item item-6">
+                    <img src="assets/student projects and achievements/sp (16).jpg" alt="" class="gallery-clickable-img" data-full-img="assets/student projects and achievements/sp (18).jpg">
+                </div>
+                <div class="grid-item item-7">
+                    <img src="assets/student projects and achievements/sp (9).jpg" alt="" class="gallery-clickable-img" data-full-img="assets/student projects and achievements/sp (9).jpg">
+                </div>
+                <div class="grid-item item-8">
+                    <img src="assets/student projects and achievements/Firetruck1.jpg" alt="" class="gallery-clickable-img" data-full-img="assets/student projects and achievements/Firetruck1.jpg">
+                </div>
+                <div class="grid-item item-9">
+                    <img src="assets/student projects and achievements/sp (11).jpg" alt="" class="gallery-clickable-img" data-full-img="assets/student projects and achievements/sp (11).jpg">
+                </div>
+                <div class="grid-item item-10">
+                    <img src="assets/student projects and achievements/sp (14).jpg" alt="" class="gallery-clickable-img" data-full-img="assets/student projects and achievements/sp (14).jpg">
+                </div>
+                <div class="grid-item item-11">
+                    <img src="assets/student projects and achievements/sp (3).jpg" alt="" class="gallery-clickable-img" data-full-img="assets/student projects and achievements/sp (16).jpg">
+                </div>
+                <div class="grid-item item-12">
+                    <img src="assets/student projects and achievements/sp (17).jpg" alt="" class="gallery-clickable-img" data-full-img="assets/student projects and achievements/sp (17).jpg">
+                </div>
+                <div class="grid-item item-13">
+                    <img src="assets/student projects and achievements/sp (15).jpg" alt="" class="gallery-clickable-img" data-full-img="assets/student projects and achievements/sp (15).jpg">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ================================================================
+         VIDEO MODAL (FOR GOOGLE DRIVE)
+         ================================================================ -->
+    <div class="modal fade" id="cpeVideoModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content bg-dark text-white border-0">
+                <div class="modal-header border-0 pb-0">
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-3">
+                    <div class="ratio ratio-16x9">
+                        <iframe id="mainDrivePlayer" 
+                                src="" 
+                                title="Google Drive video player" 
+                                frameborder="0" 
+                                allow="autoplay; encrypted-media" 
+                                allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ================================================================
+         IMAGE LIGHTBOX MODAL
+         ================================================================ -->
+    <div class="modal fade" id="imageLightboxModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content bg-transparent border-0 text-center">
+                <div class="modal-header border-0 p-0 justify-content-end mb-2">
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-0 position-relative">
+                    <img id="lightboxImage" src="" class="img-fluid rounded-3 shadow-lg" alt="Enlarged view">
+                    <p id="lightboxCaption" class="text-white-50 mt-3 font-monospace"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+
+</html>
