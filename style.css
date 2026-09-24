@@ -49,6 +49,8 @@ body.about-page {
 /* Background Image Assignments */
 .about-section.slide-1 {
     background-image: url('assets/whatiscpe.png');
+    justify-content: flex-start;
+    padding-top: 150px;
 }
 
 .about-section.slide-2 {
@@ -57,29 +59,21 @@ body.about-page {
 
 .about-section.slide-3 {
     background-image: url('assets/ABT LAST.png');
+    padding-bottom: 1rem;
 }
 
 .about-section.slide-4 {
     background-image: url('assets/ABT LAST.png');
+    padding-bottom: 1rem;
 }
 
 .about-section.slide-5 {
     background-image: url('assets/ABT LAST.png');
-}
-
-.about-section.slide-3 {
-    padding-bottom: 1rem;
-}
-
-
-.about-section.slide-4 {
-    padding-bottom: 1rem;
-}
-
-.about-section.slide-5 {
     padding-top: 1rem;
     min-height: auto;
 }
+
+
 
 
 /* Background glow */
