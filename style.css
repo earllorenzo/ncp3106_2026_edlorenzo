@@ -22,7 +22,7 @@ html {
 }
 
 body.home-page {
-    background-image: url('assets/homepagebg2.png'); /* Replace with home page background file */
+    background-image: url('assets/homepagebg2.png');
 }
 
 body.about-page {
@@ -297,8 +297,8 @@ margin-left: -170px;
         filter: drop-shadow(0 20px 25px rgba(0, 0, 0, 0.5));
     }
     50% {
-        transform: translateY(-25px); /* Increased float height (was -12px) */
-        filter: drop-shadow(0 45px 40px rgba(0, 0, 0, 0.7)); /* Shadow expands/dims when high */
+        transform: translateY(-25px);
+        filter: drop-shadow(0 45px 40px rgba(0, 0, 0, 0.7)); 
     }
     100% {
         transform: translateY(0px);
@@ -398,8 +398,8 @@ margin-left: -170px;
     position: absolute;
     top: 52%;
     left: 50%;
-    transform: translateX(-50%); /* Centers the bar horizontally */
-    width: 30%;                   /* Extends equally 30% to the left and 30% to the right */
+    transform: translateX(-50%); 
+    width: 30%;                   
     height: 10px;
     background: #8b72bd;
     box-shadow: 0 0 12px rgba(139, 114, 189, 0.8);
@@ -2433,10 +2433,10 @@ body.cpe-page-body .cpe-hero-section span.highlight-text {
 
 
 /* ==========================================================================
-   FAQ Page
+   FAQ Page (Compact)
    ========================================================================== */
 .faq-title {
-    font-size: clamp(3.2rem, 5.5vw, 5rem);
+    font-size: clamp(2.4rem, 4vw, 3.5rem);
     font-weight: 800;
     letter-spacing: -0.02em;
 }
@@ -2447,30 +2447,30 @@ body.cpe-page-body .cpe-hero-section span.highlight-text {
     -webkit-text-fill-color: transparent;
 }
 
-/* Scaled FAQ Pill Cards */
+/* Scaled Down FAQ Pill Cards */
 .faq-pill-card {
     background-color: #161618 !important;
     border: 1px solid #2a2a2e !important;
-    border-radius: 40px !important; /* Larger pill curves */
+    border-radius: 20px !important; /* Smaller pill curves */
     overflow: hidden;
     transition: border-color 0.3s ease, background-color 0.3s ease, transform 0.2s ease;
 }
 
 .faq-pill-card:hover {
     border-color: #52525e !important;
-    transform: translateY(-2px);
+    transform: translateY(-1px);
 }
 
 .faq-pill-btn {
     background: transparent !important;
     color: #ffffff !important;
     font-weight: 600;
-    padding: 1.75rem 2.5rem !important; /* Increased padding */
+    padding: 1rem 1.5rem !important; /* Reduced padding */
     box-shadow: none !important;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 1.35rem; /* Larger title text */
+    font-size: 1rem; /* Smaller title text */
 }
 
 /* Custom (+) Indicator */
@@ -2479,7 +2479,7 @@ body.cpe-page-body .cpe-hero-section span.highlight-text {
 }
 
 .faq-icon {
-    font-size: 2.2rem; /* Larger toggle icon */
+    font-size: 1.4rem; /* Smaller toggle icon */
     font-weight: 300;
     line-height: 1;
     transition: transform 0.3s ease;
@@ -2490,9 +2490,9 @@ body.cpe-page-body .cpe-hero-section span.highlight-text {
 }
 
 .faq-pill-body {
-    padding: 0 2.5rem 2.25rem 2.5rem;
-    font-size: 1.15rem; /* Larger body text */
-    line-height: 1.7;
+    padding: 0 1.5rem 1.25rem 1.5rem;
+    font-size: 0.9rem; /* Smaller body text */
+    line-height: 1.6;
 }
 
 
