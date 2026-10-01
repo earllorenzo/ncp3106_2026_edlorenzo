@@ -298,6 +298,30 @@ margin-left: -170px;
     }
 }
 
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 15px;
+    padding: 10px 20px;
+}
+
+footer p {
+    margin: 0;
+}
+
+.bionote-link {
+    font-size: 10px;
+    color: rgba(255, 255, 255, 0.55);
+    text-decoration: none;
+    letter-spacing: 0.5px;
+}
+
+.bionote-link:hover {
+    color: #FFFFFF;
+}
+
+
 /* ==========================================================================
    ABOUT TABS SECTION
    ========================================================================== */
