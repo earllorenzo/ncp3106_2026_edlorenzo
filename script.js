@@ -567,4 +567,43 @@ const videoModalElement = document.getElementById("cpeVideoModal");
         });
     }
 
+
+    /* ==========================================================================
+       7. FIELDS PAGE: 3D CARD FLIP
+       ========================================================================== */
+    const fanCards = document.querySelectorAll('.fan-card');
+
+    if (fanCards.length) {
+        const setFlipped = (card, flipped) => {
+            card.classList.toggle('flipped', flipped);
+            card.setAttribute('aria-pressed', String(flipped));
+        };
+
+        const unflipAll = () => fanCards.forEach(c => setFlipped(c, false));
+
+        fanCards.forEach(card => {
+            card.addEventListener('click', () => {
+                const willFlip = !card.classList.contains('flipped');
+                unflipAll();                    // only one card open at a time
+                setFlipped(card, willFlip);
+            });
+
+            card.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    card.click();
+                }
+            });
+        });
+
+        // Click anywhere else (or press Esc) to flip everything back
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('.fan-card')) unflipAll();
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') unflipAll();
+        });
+    }
+
 });
