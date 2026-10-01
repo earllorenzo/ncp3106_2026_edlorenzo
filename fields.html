@@ -61,104 +61,274 @@
         <div class="fields-header position-relative z-1 mt-auto">
             <h1 class="hero-title mb-1">Specialization Fields</h1>
             <h2 class="about-title gradient-text fw-bold">Computer Engineering</h2>
-            <p class="fields-desc mt-2">Explore the core domains and industry roles shaping modern technologies.</p>
+            <p class="fields-desc mt-2">Explore the core domains and industry roles shaping modern technologies. Click a card to flip it.</p>
         </div>
 
         <!-- 3D Fan Deck Cards Section -->
         <div class="fan-deck-container position-relative z-1">
             
-            <!-- Card 1: Cybersecurity -->
-            <div class="fan-card card-cybersecurity">
-                <div class="card-inner p-4 position-relative">
-                    <div class="d-flex justify-content-between align-items-center w-100 position-absolute top-0 start-0 p-4 z-2">
-                        <span class="card-title-text">Cybersecurity</span>
-                        <span class="badge-rating">★ 4.9</span>
-                    </div>
-                    
-                    <!-- Center Image Wrapper -->
-                    <div class="card-img-center-wrapper">
-                        <img src="assets/icons/icons (1).png" alt="Cybersecurity Specialist" class="field-card-img">
+            <!-- Card: Cybersecurity -->
+            <div class="fan-card card-cybersecurity" tabindex="0" role="button" aria-pressed="false" aria-label="Cybersecurity - flip card">
+                <div class="flip-inner">
+
+                    <!-- FRONT -->
+                    <div class="card-face card-front">
+                        <div class="card-inner p-4 position-relative">
+                            <div class="d-flex justify-content-between align-items-center w-100 position-absolute top-0 start-0 p-4 z-2">
+                                <span class="card-title-text">Cybersecurity</span>
+                                <span class="badge-rating">★ 4.9</span>
+                            </div>
+
+                            <!-- Center Image Wrapper -->
+                            <div class="card-img-center-wrapper">
+                                <img src="assets/icons/icons (1).png" alt="Cybersecurity Specialist" class="field-card-img">
+                            </div>
+
+                            <div class="w-100 position-absolute bottom-0 start-0 pb-4 text-center z-2">
+                                <p class="card-role-sub">Security Engineer</p>
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="w-100 position-absolute bottom-0 start-0 pb-4 text-center z-2">
-                        <p class="card-role-sub">Security Engineer</p>
+                    <!-- BACK -->
+                    <div class="card-face card-back">
+                        <div class="card-inner card-back-inner p-4">
+                            <div class="back-header">
+                                <span class="card-title-text">Cybersecurity</span>
+                                <span class="badge-rating">★ 4.9</span>
+                            </div>
+
+                            <p class="back-desc">Protecting systems, networks, and data from attacks, leaks, and unauthorized access.</p>
+
+                            <p class="back-label">Key skills</p>
+                            <div class="skill-chips">
+                                <span class="skill-chip">Network security</span>
+                                <span class="skill-chip">Cryptography</span>
+                                <span class="skill-chip">Ethical hacking</span>
+                                <span class="skill-chip">Digital forensics</span>
+                            </div>
+
+                            <p class="back-label">Career paths</p>
+                            <ul class="role-list">
+                                <li>Security Engineer</li>
+                                <li>Penetration Tester</li>
+                                <li>SOC Analyst</li>
+                            </ul>
+                        </div>
                     </div>
+
                 </div>
             </div>
 
-            <!-- Card 2: Robotics & Automation -->
-            <div class="fan-card card-robotics">
-                <div class="card-inner p-4 position-relative">
-                    <div class="d-flex justify-content-between align-items-center w-100 position-absolute top-0 start-0 p-4 z-2">
-                        <span class="card-title-text">Robotics</span>
-                        <span class="badge-rating">★ 4.8</span>
-                    </div>
-                    
-                    <!-- Center Image Wrapper -->
-                    <div class="card-img-center-wrapper">
-                        <img src="assets/icons/icons (2).png" alt="Robotics Engineer" class="field-card-img">
+            <!-- Card: Robotics -->
+            <div class="fan-card card-robotics" tabindex="0" role="button" aria-pressed="false" aria-label="Robotics - flip card">
+                <div class="flip-inner">
+
+                    <!-- FRONT -->
+                    <div class="card-face card-front">
+                        <div class="card-inner p-4 position-relative">
+                            <div class="d-flex justify-content-between align-items-center w-100 position-absolute top-0 start-0 p-4 z-2">
+                                <span class="card-title-text">Robotics</span>
+                                <span class="badge-rating">★ 4.8</span>
+                            </div>
+
+                            <!-- Center Image Wrapper -->
+                            <div class="card-img-center-wrapper">
+                                <img src="assets/icons/icons (2).png" alt="Robotics Engineer" class="field-card-img">
+                            </div>
+
+                            <div class="w-100 position-absolute bottom-0 start-0 pb-4 text-center z-2">
+                                <p class="card-role-sub">Automation Specialist</p>
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="w-100 position-absolute bottom-0 start-0 pb-4 text-center z-2">
-                        <p class="card-role-sub">Automation Specialist</p>
+                    <!-- BACK -->
+                    <div class="card-face card-back">
+                        <div class="card-inner card-back-inner p-4">
+                            <div class="back-header">
+                                <span class="card-title-text">Robotics</span>
+                                <span class="badge-rating">★ 4.8</span>
+                            </div>
+
+                            <p class="back-desc">Designing machines that sense their surroundings, make decisions, and move on their own.</p>
+
+                            <p class="back-label">Key skills</p>
+                            <div class="skill-chips">
+                                <span class="skill-chip">Control systems</span>
+                                <span class="skill-chip">Sensors &amp; actuators</span>
+                                <span class="skill-chip">Kinematics</span>
+                                <span class="skill-chip">ROS</span>
+                            </div>
+
+                            <p class="back-label">Career paths</p>
+                            <ul class="role-list">
+                                <li>Automation Specialist</li>
+                                <li>Robotics Engineer</li>
+                                <li>Mechatronics Engineer</li>
+                            </ul>
+                        </div>
                     </div>
+
                 </div>
             </div>
 
-            <!-- Card 3: Embedded Systems -->
-            <div class="fan-card card-embedded active-center">
-                <div class="card-inner p-4 position-relative">
-                    <div class="d-flex justify-content-between align-items-center w-100 position-absolute top-0 start-0 p-4 z-2">
-                        <span class="card-title-text">Embedded</span>
-                        <span class="badge-rating">★ 5.0</span>
-                    </div>
-                    
-                    <!-- Center Image Wrapper -->
-                    <div class="card-img-center-wrapper">
-                        <img src="assets/icons/icons (3).png" alt="Embedded Systems Engineer" class="field-card-img">
+            <!-- Card: Embedded -->
+            <div class="fan-card card-embedded active-center" tabindex="0" role="button" aria-pressed="false" aria-label="Embedded - flip card">
+                <div class="flip-inner">
+
+                    <!-- FRONT -->
+                    <div class="card-face card-front">
+                        <div class="card-inner p-4 position-relative">
+                            <div class="d-flex justify-content-between align-items-center w-100 position-absolute top-0 start-0 p-4 z-2">
+                                <span class="card-title-text">Embedded</span>
+                                <span class="badge-rating">★ 5.0</span>
+                            </div>
+
+                            <!-- Center Image Wrapper -->
+                            <div class="card-img-center-wrapper">
+                                <img src="assets/icons/icons (3).png" alt="Embedded Systems Engineer" class="field-card-img">
+                            </div>
+
+                            <div class="w-100 position-absolute bottom-0 start-0 pb-4 text-center z-2">
+                                <p class="card-role-sub">Firmware Engineer</p>
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="w-100 position-absolute bottom-0 start-0 pb-4 text-center z-2">
-                        <p class="card-role-sub">Firmware Engineer</p>
+                    <!-- BACK -->
+                    <div class="card-face card-back">
+                        <div class="card-inner card-back-inner p-4">
+                            <div class="back-header">
+                                <span class="card-title-text">Embedded</span>
+                                <span class="badge-rating">★ 5.0</span>
+                            </div>
+
+                            <p class="back-desc">Writing the low-level software that runs inside devices, from wearables to car controllers.</p>
+
+                            <p class="back-label">Key skills</p>
+                            <div class="skill-chips">
+                                <span class="skill-chip">C / C++</span>
+                                <span class="skill-chip">Microcontrollers</span>
+                                <span class="skill-chip">RTOS</span>
+                                <span class="skill-chip">Hardware interfacing</span>
+                            </div>
+
+                            <p class="back-label">Career paths</p>
+                            <ul class="role-list">
+                                <li>Firmware Engineer</li>
+                                <li>Embedded Developer</li>
+                                <li>Hardware Engineer</li>
+                            </ul>
+                        </div>
                     </div>
+
                 </div>
             </div>
 
-            <!-- Card 4: AI & Machine Learning -->
-            <div class="fan-card card-ai">
-                <div class="card-inner p-4 position-relative">
-                    <div class="d-flex justify-content-between align-items-center w-100 position-absolute top-0 start-0 p-4 z-2">
-                        <span class="card-title-text">AI & ML</span>
-                        <span class="badge-rating">★ 4.9</span>
-                    </div>
-                    
-                    <!-- Center Image Wrapper -->
-                    <div class="card-img-center-wrapper">
-                        <img src="assets/icons/icons (4).png" alt="AI Specialist" class="field-card-img">
+            <!-- Card: AI & ML -->
+            <div class="fan-card card-ai" tabindex="0" role="button" aria-pressed="false" aria-label="AI & ML - flip card">
+                <div class="flip-inner">
+
+                    <!-- FRONT -->
+                    <div class="card-face card-front">
+                        <div class="card-inner p-4 position-relative">
+                            <div class="d-flex justify-content-between align-items-center w-100 position-absolute top-0 start-0 p-4 z-2">
+                                <span class="card-title-text">AI &amp; ML</span>
+                                <span class="badge-rating">★ 4.9</span>
+                            </div>
+
+                            <!-- Center Image Wrapper -->
+                            <div class="card-img-center-wrapper">
+                                <img src="assets/icons/icons (4).png" alt="AI Specialist" class="field-card-img">
+                            </div>
+
+                            <div class="w-100 position-absolute bottom-0 start-0 pb-4 text-center z-2">
+                                <p class="card-role-sub">Machine Learning Engineer</p>
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="w-100 position-absolute bottom-0 start-0 pb-4 text-center z-2">
-                        <p class="card-role-sub">Machine Learning Engineer</p>
+                    <!-- BACK -->
+                    <div class="card-face card-back">
+                        <div class="card-inner card-back-inner p-4">
+                            <div class="back-header">
+                                <span class="card-title-text">AI &amp; ML</span>
+                                <span class="badge-rating">★ 4.9</span>
+                            </div>
+
+                            <p class="back-desc">Building systems that learn from data to recognize patterns and make predictions.</p>
+
+                            <p class="back-label">Key skills</p>
+                            <div class="skill-chips">
+                                <span class="skill-chip">Python</span>
+                                <span class="skill-chip">Neural networks</span>
+                                <span class="skill-chip">Computer vision</span>
+                                <span class="skill-chip">Data modeling</span>
+                            </div>
+
+                            <p class="back-label">Career paths</p>
+                            <ul class="role-list">
+                                <li>Machine Learning Engineer</li>
+                                <li>Data Scientist</li>
+                                <li>AI Researcher</li>
+                            </ul>
+                        </div>
                     </div>
+
                 </div>
             </div>
 
-            <!-- Card 5: IoT & Networking -->
-            <div class="fan-card card-iot">
-                <div class="card-inner p-4 position-relative">
-                    <div class="d-flex justify-content-between align-items-center w-100 position-absolute top-0 start-0 p-4 z-2">
-                        <span class="card-title-text">Networks</span>
-                        <span class="badge-rating">★ 4.7</span>
-                    </div>
-                    
-                    <!-- Center Image Wrapper -->
-                    <div class="card-img-center-wrapper">
-                        <img src="assets/icons/icons (5).png" alt="Network Systems Engineer" class="field-card-img">
+            <!-- Card: Networks -->
+            <div class="fan-card card-iot" tabindex="0" role="button" aria-pressed="false" aria-label="Networks - flip card">
+                <div class="flip-inner">
+
+                    <!-- FRONT -->
+                    <div class="card-face card-front">
+                        <div class="card-inner p-4 position-relative">
+                            <div class="d-flex justify-content-between align-items-center w-100 position-absolute top-0 start-0 p-4 z-2">
+                                <span class="card-title-text">Networks</span>
+                                <span class="badge-rating">★ 4.7</span>
+                            </div>
+
+                            <!-- Center Image Wrapper -->
+                            <div class="card-img-center-wrapper">
+                                <img src="assets/icons/icons (5).png" alt="Network Systems Engineer" class="field-card-img">
+                            </div>
+
+                            <div class="w-100 position-absolute bottom-0 start-0 pb-4 text-center z-2">
+                                <p class="card-role-sub">IoT Architect</p>
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="w-100 position-absolute bottom-0 start-0 pb-4 text-center z-2">
-                        <p class="card-role-sub">IoT Architect</p>
+                    <!-- BACK -->
+                    <div class="card-face card-back">
+                        <div class="card-inner card-back-inner p-4">
+                            <div class="back-header">
+                                <span class="card-title-text">Networks</span>
+                                <span class="badge-rating">★ 4.7</span>
+                            </div>
+
+                            <p class="back-desc">Connecting devices and services into reliable, scalable communication infrastructure.</p>
+
+                            <p class="back-label">Key skills</p>
+                            <div class="skill-chips">
+                                <span class="skill-chip">TCP/IP</span>
+                                <span class="skill-chip">Wireless &amp; IoT</span>
+                                <span class="skill-chip">Cloud networking</span>
+                                <span class="skill-chip">Protocols</span>
+                            </div>
+
+                            <p class="back-label">Career paths</p>
+                            <ul class="role-list">
+                                <li>IoT Architect</li>
+                                <li>Network Engineer</li>
+                                <li>Systems Administrator</li>
+                            </ul>
+                        </div>
                     </div>
+
                 </div>
             </div>
 
@@ -167,5 +337,6 @@
     </main>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
